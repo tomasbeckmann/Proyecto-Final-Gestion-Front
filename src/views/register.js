@@ -1,6 +1,7 @@
-import Registers from "../components/application/register";
+import { Registers } from "../components/application/registers"
 
-const Register = () => {
+
+export const Register = () => {
 
     return (
         <div>
@@ -10,4 +11,3 @@ const Register = () => {
 
 }
 
-export default Register; 

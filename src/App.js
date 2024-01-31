@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import { Landing } from "./views/landing";
-import Register from "./views/register";
+import { Register } from "./views/register";
 
 function App() {
   return (
