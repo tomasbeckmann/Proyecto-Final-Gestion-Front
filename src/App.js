@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing/>} /> {/* 👈 Renders at /app/ */}
+        <Route path="/" element={<Landing />} /> {/* 👈 Renders at /app/ */}
       </Routes>
     </BrowserRouter>
   );
