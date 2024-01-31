@@ -1,5 +1,9 @@
+/* import {SideBar} from "../components/application/sidebar";
+
 export const Home = () => {
     return (
-        <h1>este es mi home </h1>
+        <SideBar/>
     )
 }
+
+ */
