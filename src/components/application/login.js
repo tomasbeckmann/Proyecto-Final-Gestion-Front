@@ -10,7 +10,7 @@ import {
 }
 from 'mdb-react-ui-kit';
 
-function Login() {
+export function Login() {
   return (
     <>
     <h1 className='d-flex justify-content-center'>Ingresar al sistema</h1>
@@ -37,4 +37,3 @@ function Login() {
 }
 
 
-export default Login;
