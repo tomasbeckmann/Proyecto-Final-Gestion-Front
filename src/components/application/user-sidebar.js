@@ -1,7 +1,7 @@
-import '/workspaces/Proyecto-Final-Gestion-Front/src/css/sidebar.css';
+import '/workspaces/Proyecto-Final-Gestion-Front/src/css/user-sidebar.css';
 /* import 'bootstrap/dist/css/bootstrap.min.css' */
 
-export const Sidebar = () => {
+export const Usersidebar = () => {
   return (
     <main>
       <div className="d-flex flex-column flex-shrink-0 p-3 text-white dash-container" style={{ width: '280px' }}>
@@ -14,68 +14,48 @@ export const Sidebar = () => {
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/home" className="nav-link active list-margin" aria-current="page">
+            <a href="/userhome" className="nav-link active list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
-              <i className="fa-solid fa-house icon" style={{ fontSize: '1.25em' }} />
+              <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
               Home
             </a>
           </li>
           <li>
-            <a href="/people" className="nav-link text-white list-margin">
+            <a href="/userdocuments" className="nav-link text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
-              <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
-              People
+              <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
+              Documents
             </a>
           </li>
           <li>
-            <a href="/updatelog" className="nav-link text-white list-margin">
+            <a href="/usertasks" className="nav-link text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>
               <i className="fa-solid fa-clipboard-list icon" style={{ fontSize: '1.25em' }} />
-              Update Log
+              Tasks
             </a>
           </li>
           <li>
-            <a href="/calendar" className="nav-link text-white list-margin">
+            <a href="/usercalendar" className="nav-link text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
-
               </svg>
               <i className="fa-solid fa-calendar-days icon" style={{ fontSize: '1.25em' }} />
               Calendar
             </a>
           </li>
           <li>
-            <a href="/filesfolder" className="nav-link text-white list-margin">
+            <a href="/userinbox" className="nav-link text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
-
-              </svg>
-              <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
-              Files folder
-            </a>
-          </li>
-          <li>
-            <a href="/usermanagement" className="nav-link text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-
-              </svg>
-              <i className="fa-solid fa-users icon" style={{ fontSize: '1.25em' }} />
-              User Management
-            </a>
-          </li>
-          <li>
-            <a href="/inbox" className="nav-link text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-
               </svg>
               <i className="fa-solid fa-inbox icon" style={{ fontSize: '1.25em' }} />
               Inbox
             </a>
           </li>
           <li>
-            <a href="/help" className="nav-link text-white  help-margin">
+            <a href="/userhelp" className="nav-link text-white help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
@@ -83,7 +63,7 @@ export const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/notifications" className="nav-link text-white">
+            <a href="usernotifications" className="nav-link text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-bell icon" style={{ fontSize: '1.25em' }} />
