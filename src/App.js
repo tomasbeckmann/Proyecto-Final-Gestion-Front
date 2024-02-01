@@ -1,12 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-import { Landing } from "./views/landing";
+import { Home } from "./views/home";
+import { CreateTask } from "./views/createtask";
+import { ListTasks } from "./views/listtasks";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />} /> {/* 👈 Renders at /app/ */}
+        <Route path="/" element={<Home />} /> {/* 👈 Renders at /app/ */}
+        <Route path="/createtask" element={<CreateTask />} />
+        <Route path="/listtasks" element={< ListTasks/>} />
+
       </Routes>
     </BrowserRouter>
   );
