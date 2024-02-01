@@ -2,9 +2,8 @@ import '../css/userprofile.css'
 
 export const UserProfile = () => {
   return (
-    <div className="container">
+    <div className="container center">
       <div className="main-body">
-      
         <div className="row gutters-sm">
           <div className="col-md-4 mb-3">
             <div className="card">
@@ -38,6 +37,7 @@ export const UserProfile = () => {
             </div>
             <div className='card-contract'>
               <div className="card mt-3">
+                <div className='margintop'>
                 <ul className="list-group list-group-flush">
                   <li>
                     <i class="fa-solid fa-user-check" />
@@ -52,6 +52,7 @@ export const UserProfile = () => {
                     <p className="text font-size-sm">Tipo de Contrato: Indefinido</p>
                   </li>
                 </ul>
+                </div>
               </div>
             </div>
           </div>
