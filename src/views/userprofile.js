@@ -79,7 +79,7 @@ export const UserProfile = () => {
                         <button>Cargar</button>
                       </td>
                       <td>
-                        <button>Ver</button>
+                        <button>Ver Documento</button>
                       </td>
                     </tr>
                   </tbody>
