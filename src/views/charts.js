@@ -1,35 +1,49 @@
 import React from 'react';
-import LineChartComponent from "../components/charts/linechart";
-import AreaChartComponent from "../components/charts/areachart";
+import LineChartComponent from '../components/charts/linechart';
+import AreaChartComponent from '../components/charts/areachart';
 import BarChartComponent from '../components/charts/barchart';
 import PieChartComponent from '../components/charts/piechart';
-import CalendarComponent from '../components/calendar/calendar';
+
 // import ChatComponent from '../components/chat/chat';
 
-export const Graphics = () => {
+export const GraphicsChart = () => {
   return (
     <>
-      <h1>Line and Area Charts</h1>
-      <div className="container">
+      <h1 className="text-center">Line and Area Charts</h1>
+      <div className="container ">
         <div className="row">
-          <div className="col-md-6">
-            <LineChartComponent />
+          <div className="col-md-6 mb-4">
+          <div className="card card-custom" >
+              <div className="card-body">
+                <h5 className="card-title"> </h5>
+                <LineChartComponent />
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <AreaChartComponent />
+          <div className="col-md-6 mb-4">
+          <div className="card card-custom" >
+              <div className="card-body">
+                <h5 className="card-title"> </h5>
+                <AreaChartComponent />
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <BarChartComponent />
+          <div className="col-md-6 mb-4">
+          <div className="card card-custom" >
+              <div className="card-body">
+                <h5 className="card-title"> </h5>
+                <BarChartComponent />
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <PieChartComponent />
+          <div className="col-md-6 mb-4">
+            <div className="card card-custom" >
+              <div className="card-body">
+                <h5 className="card-title"> </h5>
+                <PieChartComponent />
+              </div>
+            </div>
           </div>
-          <div className="col-md-12">
-            <CalendarComponent />
-          </div>
-          {/* <div className="col-md-12">
-            <ChatComponent />
-          </div> */}
         </div>
       </div>
     </>

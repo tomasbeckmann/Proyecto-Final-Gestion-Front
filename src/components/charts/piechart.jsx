@@ -1,60 +1,70 @@
+import React from "react";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-import { PieChart, Pie, Cell } from "recharts";
+class PieChartComponent extends React.Component {
+  COLORS = ["#8884d8", "#82ca9d", "#FFBB28", "#FF8042", "#AF19FF"];
+  pieData = [
+    {
+      name: "Tareas Creadas",
+      value: 54.85
+    },
+    {
+      name: "Tareas Asignadas",
+      value: 47.91
+    },
+    {
+      name: "Tareas ejecutadas",
+      value: 16.85
+    },
+    {
+      name: "Tareas Finalizadas",
+      value: 16.14
+    }
+  ];
 
-const data = [
-  
-  { name: "Sin asignar", value: 200 },
-  { name: "Inicializadas", value: 300 },
-  { name: "Pendientes", value: 100 },
-  { name: "Terminadas", value: 500 }
-];
+  CustomTooltip = ({ active, payload, label }) => {
+    if (active) {
+      return (
+        <div
+          className="custom-tooltip"
+          style={{
+            backgroundColor: "#ffffff",
+            padding: "35px",
+            border: "1px solid #cccc"
+            }}
+        >
+          <label>{`${payload[0].name} : ${payload[0].value.toFixed(2)}%`}</label>
+        </div>
+      );
+    }
+    return null;
+  };
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index
-}: any) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor={x > cx ? "start" : "end"}
-      dominantBaseline="central"
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
-
-export default function PieChartComponent() {
-  return (
-    <PieChart width={400} height={400}>
-      <Pie
-        data={data}
-        cx={200}
-        cy={200}
-        labelLine={false}
-        label={renderCustomizedLabel}
-        outerRadius={80}
-        fill="#8884d8"
-        dataKey="value"
-      >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-    </PieChart>
-  );
+  render() {
+    return (
+      <PieChart width={550} height={400}>
+        <Pie
+          data={this.pieData}
+          dataKey="value"
+          nameKey="name"
+          cx="50%"
+          cy="50%"  
+          outerRadius={150}
+          fill="#8884d8"
+        >
+          {this.pieData.map((entry, index) => (
+            <Cell
+              key={`cell-${index}`}
+              fill={this.COLORS[index % this.COLORS.length]}
+            />
+          ))}
+        </Pie>
+        <Tooltip content={<this.CustomTooltip />} />
+        <Legend />
+      </PieChart>
+    );
+  }
 }
+
+export default PieChartComponent;
+

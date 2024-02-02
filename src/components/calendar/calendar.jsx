@@ -10,7 +10,7 @@ export default function CalendarComponent() {
   let firstDaty = 1;
 
   return (
-    <div className="Calendar">
+    <div className="Calendar ">
       <FullCalendar
         defaultView="dayGridMonth"
         firstDay={firstDaty}

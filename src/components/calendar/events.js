@@ -4,7 +4,7 @@ const events = [
     { title: "caraysello +5", start: getDate("2024-02-03") },
     
     {
-      title: "VERDE +10",
+      title: "LAVAR CAMIONES",
       start: getDate("YEAR-MONTH-06"),
       end: getDate("YEAR-MONTH-10"),
       backgroundColor: "green"
