@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import { Home } from "./views/home";
-import { CreateTask } from "./views/createtask";
-import { ListTasks } from "./views/listtasks";
+import {NewTask } from "./views/newtask";
+import { Tasks } from "./views/tasks";
 
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} /> {/* 👈 Renders at /app/ */}
-        <Route path="/createtask" element={<CreateTask />} />
-        <Route path="/listtasks" element={< ListTasks/>} />
+        <Route path="/createtask" element={<NewTask />} />
+        <Route path="/tasks" element={< Tasks/>} />
 
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React from "react";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "/workspaces/Proyecto-Final-Gestion-Front/src/css/newtask.css"
 import {
   MDBBtn,
   MDBCard,
@@ -17,7 +18,7 @@ import {
 
 export  function NewTask() {
   return (
-    <section className="vh-100" style={{ backgroundColor: "#e2d5de" }}>
+    <section className=" newtask vh-100">
       <MDBContainer className="py-5 h-100">
         <MDBRow className="d-flex justify-content-center align-items-center">
           <MDBCol xl="10">

@@ -1,4 +1,5 @@
 import React from "react";
+import "/workspaces/Proyecto-Final-Gestion-Front/src/css/tasks.css"
 import {
   MDBBadge,
   MDBCard,
