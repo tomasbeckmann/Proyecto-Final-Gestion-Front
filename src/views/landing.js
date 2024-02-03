@@ -7,7 +7,7 @@ import { Services } from "../components/landingpage/services";
 // import { Gallery } from "../components/landingpage/gallery";
 import { Testimonials } from "../components/landingpage/testimonials";
 import { Team } from "../components/landingpage/Team";
-// import { Contact } from "./components/landingpage/contact";
+// import { Contact } from "../components/landingpage/contact";
 import JsonData from "../data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "../App.css";
@@ -37,5 +37,3 @@ export const Landing = () => {
     </div>
   );
 };
-
-
