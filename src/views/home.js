@@ -1,8 +1,9 @@
-
 export const Home = () => {
     return (
         <>
-        <h1>ESTE ES MI HOME</h1>
+        <h1>este es mi home </h1>
+       
         </>
     )
 }
+
