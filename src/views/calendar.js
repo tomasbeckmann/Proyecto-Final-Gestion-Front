@@ -1,7 +1,7 @@
 import React from 'react';
 import CalendarComponent from '../components/calendar/calendar';
 // import '../App.css'; // Importa tu archivo CSS
-import FileList from '../components/filelist/filelist';
+
 
 export const Calendar = () => {
 
@@ -36,7 +36,7 @@ export const Calendar = () => {
           </div>
         </div>
       </div>
-      <FileList files={files}/>
+      
       </section>
     </>
   );
