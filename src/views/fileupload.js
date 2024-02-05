@@ -62,7 +62,7 @@ export const FileUpload = () => {
 
   return (
     <div
-      className={`drag-image ${isActive ? 'active' : ''}`}
+      className={filebody `drag-image ${isActive ? 'active' : ''}`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
