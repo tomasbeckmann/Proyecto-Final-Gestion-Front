@@ -1,0 +1,124 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  
+  html {
+    height: -webkit-fill-available;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-family: Roboto;
+    font-size: 18px;
+  }
+  
+  .dash-container{
+    background-color: #206EEB;
+    height: 100%;
+  }
+  
+  .title-icon{
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  .title{
+    margin-top: 5px;
+    font-size: 28px;
+  }
+  
+  .icon{
+    margin-right: 10px;
+  }
+  
+  .list-margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .help-margin{
+    margin-top: 10px;
+    margin-bottom: 165px;
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  
+  hr{
+    background-color: #3CE6C9;
+    height: 3px;
+    width: 100%;
+  }
+  
+  .dropdown-toggle { outline: 0; }
+  
+  .nav-flush .nav-link {
+    border-radius: 0;
+  }
+  
+  .btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: #3CE6C9;
+    background-color: transparent;
+    border: 0;
+  }
+  .btn-toggle:hover,
+  .btn-toggle:focus {
+    color: rgba(0, 0, 0, .85);
+    background-color: #3CE6C9;
+  }
+  
+  .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+  }
+  
+  .btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+  }
+  .btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+  
+  .btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+  }
+  .btn-toggle-nav a:hover,
+  .btn-toggle-nav a:focus {
+    background-color: #3CE6C9;
+  }
+  
+  .scrollarea {
+    overflow-y: auto;
+  }
+  
+  .fw-semibold { font-weight: 600; }
+  .lh-tight { line-height: 1.25; }
+  
+  
+  
+  
