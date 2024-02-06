@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./views/home";
 import { Landing } from "./views/landing";
 import { Register } from "./views/register";
 import {Login} from "./components/application/login";
@@ -8,12 +9,9 @@ import { FileUpload } from "./views/fileupload";
 import { GraphicsChart } from "./views/charts";
 import { Calendar } from "./views/calendar";
 
-
-
-
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Landing/>} /> {/* 👈 Renders at /app/ */}
         <Route path="/register" element={<Register/>} /> {/* 👈 Renders at /app/ */}
@@ -23,8 +21,9 @@ function App() {
         <Route path="/linecharts" element={<GraphicsChart />} /> {/* 👈 Renders at /app/ */}
         <Route path="/calendar" element={<Calendar />} /> {/* 👈 Renders at /app/ */}
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
 export default App;
+

@@ -1,7 +1,7 @@
 
 
-
-
+export const Home = () => {
+    return (
 
 
 export const Home = () => {
@@ -10,5 +10,8 @@ export const Home = () => {
         <h1>este es mi home </h1>
        
         </>
+
     )
 }
+
+ */
