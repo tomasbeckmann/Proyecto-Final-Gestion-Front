@@ -42,7 +42,7 @@ export const FileUpload = () => {
       const fileReader = new FileReader();
       fileReader.onload = () => {
         const fileURL = fileReader.result;
-        const imgTag = <img src={fileURL} alt="image" />;
+        const imgTag = <img src={fileURL} />;
         setFile(null);
         setIsActive(false);
         dragTextRef.current.textContent = 'Drag & Drop to Upload File';
@@ -62,7 +62,7 @@ export const FileUpload = () => {
 
   return (
     <div
-      className={`drag-image ${isActive ? 'active' : ''}`}
+      className={filebody `drag-image ${isActive ? 'active' : ''}`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
