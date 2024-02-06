@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import { Landing } from "./views/landing";
+import { FileFolder } from "./views/filefolder";
 import { FileUpload } from "./views/fileupload";
 import { GraphicsChart } from "./views/charts";
 import { Calendar } from "./views/calendar";
@@ -12,10 +13,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} /> {/* 👈 Renders at /app/ */}
+        <Route path="/filefolder" element={<FileFolder />} /> {/* 👈 Renders at /app/ */}
         <Route path="/fileupload" element={<FileUpload />} /> {/* 👈 Renders at /app/ */}
         <Route path="/linecharts" element={<GraphicsChart />} /> {/* 👈 Renders at /app/ */}
         <Route path="/calendar" element={<Calendar />} /> {/* 👈 Renders at /app/ */}
-
       </Routes>
     </BrowserRouter>
   );
