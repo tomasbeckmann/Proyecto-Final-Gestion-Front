@@ -1,6 +1,4 @@
-
-
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,7 +22,7 @@
     font-family: Roboto;
     font-size: 18px;
   }
-  
+   */
   .dash-container{
     background-color: #206EEB;
     height: 100%;

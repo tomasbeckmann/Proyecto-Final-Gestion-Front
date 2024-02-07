@@ -607,3 +607,13 @@ label {
   }
 }
 
+.force-navbar{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.force-li{
+  display: inline-block !important;
+}

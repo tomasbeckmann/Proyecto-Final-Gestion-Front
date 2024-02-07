@@ -89,7 +89,7 @@ export const Registers = () => {
               <option value="Colaborador">Colaborador</option>
             </select>
           </div>
-          <button type="submit" disabled={!getIsFormValid()}>
+          <button className="register-button" type="submit" disabled={!getIsFormValid()}>
             Crear cuenta
           </button>
         </fieldset>

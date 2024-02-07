@@ -4,7 +4,7 @@ import '/workspaces/Proyecto-Final-Gestion-Front/src/css/sidebar.css';
 export const Sidebar = () => {
   return (
     <main>
-      <div className="d-flex flex-column flex-shrink-0 p-3 text-white dash-container" style={{ width: '280px' }}>
+      <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container" style={{ width: '280px' }}>
         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <svg className="bi me-2" width="40" height="32">
           </svg>

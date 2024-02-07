@@ -1,13 +1,16 @@
 import '../css/userprofile.css'
+import {Usersidebar} from '../components/application/user-sidebar'
 
 export const UserProfile = () => {
   return (
-    <div className="container center">
+    <>
+    <Usersidebar/>
+    <div className="container userprofile-body center">
       <div className="main-body">
         <div className="row gutters-sm">
           <div className="col-md-4 mb-3">
             <div className="card">
-              <div className="card-body">
+              <div className="userprofile-card-body">
                 <div className="d-flex flex-column align-items-center text-center">
                   <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" className="rounded-circle" width="150" />
                   <div className="mt-3">
@@ -74,13 +77,13 @@ export const UserProfile = () => {
                       <td>Carnet de Identidad</td>
                       <td>Aprobado</td>
                       <td>
-                        <button>Editar</button>
+                        <button className='userprofile-button'>Editar</button>
                       </td>
                       <td>
-                        <button>Cargar</button>
+                        <button className='userprofile-button'>Cargar</button>
                       </td>
                       <td>
-                        <button>Ver Documento</button>
+                        <button className='userprofile-button'>Ver Documento</button>
                       </td>
                     </tr>
                   </tbody>
@@ -91,6 +94,7 @@ export const UserProfile = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

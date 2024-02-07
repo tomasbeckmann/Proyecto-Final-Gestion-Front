@@ -4,17 +4,17 @@ import '/workspaces/Proyecto-Final-Gestion-Front/src/css/user-sidebar.css';
 export const Usersidebar = () => {
   return (
     <main>
-      <div className="d-flex flex-column flex-shrink-0 p-3 text-white dash-container" style={{ width: '280px' }}>
+      <div className="d-flex flex-column flex-shrink-0 p-3  dash-container" style={{ width: '280px' }}>
         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <svg className="bi me-2" width="40" height="32">
           </svg>
           <i class="fa-solid fa-tractor title-icon"></i>
-          <span className="title">DataGather</span>
+          <span className="title text-white">DataGather</span>
         </a>
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/userhome" className="nav-link active list-margin" aria-current="page">
+            <a href="/userprofile" className="nav-link list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
@@ -22,7 +22,7 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/userdocuments" className="nav-link text-white list-margin">
+            <a href="/userdocuments" className="nav-link list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
