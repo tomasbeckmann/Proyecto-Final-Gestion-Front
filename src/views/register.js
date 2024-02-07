@@ -1,4 +1,4 @@
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/login.css"
+import "/workspaces/Proyecto-Final-Gestion-Front/src/css/register.css"
 
 export const Register = () => {
 
