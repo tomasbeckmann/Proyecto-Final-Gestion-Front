@@ -13,22 +13,23 @@ import { Calendar } from "./views/calendar";
 import { SignIn } from "./views/login"
 import { TaskList } from "./views/tasklist";
 import {CreateTask} from "./views/createtask"
+import {UserManagement} from "./views/usermanagement"
  
 function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/createtask2" element={<CreateTask />} /> {/* 👈 Renders at /app/ */}
       <Route path="/tasklist" element={<TaskList />} /> {/* 👈 Renders at /app/ */}
       <Route path="/login" element={<SignIn />} /> {/* 👈 Renders at /app/ */}
         <Route path="/" element={<Landing />} /> {/* 👈 Renders at /app/ */}
         <Route path="/userprofile" element={<UserProfile />} /> {/* 👈 Renders at /app/ */}
-        <Route path="/createtask" element={<NewTask />} />
+        <Route path="/createtask" element={<CreateTask />} />
         <Route path="/register" element={<Register/>} /> {/* 👈 Renders at /app/ */}
         <Route path="/filefolder" element={<FileFolder />} /> {/* 👈 Renders at /app/ */}
         <Route path="/fileupload" element={<FileUpload />} /> {/* 👈 Renders at /app/ */}
         <Route path="/linecharts" element={<GraphicsChart />} /> {/* 👈 Renders at /app/ */}
         <Route path="/calendar" element={<Calendar />} /> {/* 👈 Renders at /app/ */}
+        <Route path="/usermanagement" element={<UserManagement />} /> {/* 👈 Renders at /app/ */}
       </Routes>
     </Router>
   );

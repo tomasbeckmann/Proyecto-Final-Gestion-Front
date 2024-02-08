@@ -4,6 +4,7 @@ import { Sidebar } from '../components/application/sidebar'
 export const TaskList = () => {
 	return (
 		<>
+		<div className="orden">
 		<Sidebar />
 		<div className="tasklist-body">
 			<div className="container">
@@ -79,6 +80,7 @@ export const TaskList = () => {
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		</>
 	);

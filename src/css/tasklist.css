@@ -1,5 +1,7 @@
 .tasklist-body{margin-top:20px;}
-
+.orden{
+    display: flex;
+}
 .td-style{
     width: 20%;
 }
