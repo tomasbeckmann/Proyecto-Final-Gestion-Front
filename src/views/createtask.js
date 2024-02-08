@@ -4,12 +4,11 @@ import "/workspaces/Proyecto-Final-Gestion-Front/src/css/createtask.css"
 export const CreateTask = () => {
     return (
         <div className='createtask-body'>
-            <div className="row d-flex justify-content-center container">
+            <div className="row d-flex justify-content-center .createtask-container">
                 <div className="col-md-8">
-                    <div className="card-hover-shadow-2x mb-3 card createtask-container">
+                    <div className="card-hover-shadow-2x mb-3 card">
                         <div className="card-header-tab card-header">
-                            <div className="card-header-title font-size-lg text-capitalize font-weight-normal"><i
-                                className="fa fa-tasks"></i>&nbsp;Task Lists</div>
+                            <div className="card-header-title font-size-lg text-capitalize font-weight-normal">Task Lists</div>
                         </div>
                         <div className="scroll-area-sm">
                             <perfect-scrollbar className="ps-show-limits">
@@ -30,7 +29,6 @@ export const CreateTask = () => {
                                                         <div className="widget-content-left">
                                                             <div className="widget-heading">Call Sam For payments <div className="badge badge-danger ml-2">Rejected</div>
                                                             </div>
-                                                            <div className="widget-subheading"><i>By Bob</i></div>
                                                         </div>
                                                         <div className="widget-content-right">
                                                             <button className="border-0 btn-transition btn btn-outline-success">

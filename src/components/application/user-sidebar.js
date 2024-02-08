@@ -14,7 +14,7 @@ export const Usersidebar = () => {
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/userprofile" className="nav-link list-margin" aria-current="page">
+            <a href="/userprofile" className="navlink-usersidebar text-white list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
@@ -22,7 +22,7 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/userdocuments" className="nav-link list-margin">
+            <a href="/userdocuments" className="navlink-usersidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
@@ -30,7 +30,7 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/usertasks" className="nav-link text-white list-margin">
+            <a href="/usertasks" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>
@@ -39,7 +39,7 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/usercalendar" className="nav-link text-white list-margin">
+            <a href="/usercalendar" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-calendar-days icon" style={{ fontSize: '1.25em' }} />
@@ -47,29 +47,14 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/userinbox" className="nav-link text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-              </svg>
-              <i className="fa-solid fa-inbox icon" style={{ fontSize: '1.25em' }} />
-              Inbox
-            </a>
-          </li>
-          <li>
-            <a href="/userhelp" className="nav-link text-white help-margin">
+            <a href="/userhelp" className="navlink-sidebar text-white help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
               Help
             </a>
           </li>
-          <li>
-            <a href="usernotifications" className="nav-link text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-              </svg>
-              <i className="fa-solid fa-bell icon" style={{ fontSize: '1.25em' }} />
-              Notifications
-            </a>
-          </li>
+        
         </ul>
         <hr className='hr'/>
         <div className="dropdown">

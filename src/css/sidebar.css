@@ -12,6 +12,7 @@
   html {
     height: -webkit-fill-available;
   }
+ */
   
   main {
     display: flex;
@@ -22,7 +23,8 @@
     font-family: Roboto;
     font-size: 18px;
   }
-   */
+
+ 
   .dash-container{
     background-color: #206EEB;
     height: 100%;

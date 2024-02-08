@@ -85,7 +85,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .clear {
     clear: both; }
   
-  body {
+  .register-body {
     font-size: 13px;
     line-height: 1.8;
     color: #222;
@@ -93,7 +93,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     font-weight: 400;
     font-family: Poppins; }
   
-  .container {
+  .register-container {
     width: 900px;
     background: #fff;
     margin: 0 auto;

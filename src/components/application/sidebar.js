@@ -14,7 +14,7 @@ export const Sidebar = () => {
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/home" className="nav-link active list-margin" aria-current="page">
+            <a href="/home" className="navlink-sidebar text-white active list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-house icon" style={{ fontSize: '1.25em' }} />
@@ -22,7 +22,7 @@ export const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/people" className="nav-link text-white list-margin">
+            <a href="/tasklist" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
@@ -30,16 +30,16 @@ export const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/updatelog" className="nav-link text-white list-margin">
+            <a href="/help" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
-
               </svg>
-              <i className="fa-solid fa-clipboard-list icon" style={{ fontSize: '1.25em' }} />
-              Update Log
+              <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
+              Task Management
             </a>
           </li>
+      
           <li>
-            <a href="/calendar" className="nav-link text-white list-margin">
+            <a href="/calendar" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>
@@ -48,7 +48,7 @@ export const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/filesfolder" className="nav-link text-white list-margin">
+            <a href="/filesfolder" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>
@@ -57,7 +57,7 @@ export const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/usermanagement" className="nav-link text-white list-margin">
+            <a href="/usermanagement" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>
@@ -65,31 +65,16 @@ export const Sidebar = () => {
               User Management
             </a>
           </li>
+         
           <li>
-            <a href="/inbox" className="nav-link text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-
-              </svg>
-              <i className="fa-solid fa-inbox icon" style={{ fontSize: '1.25em' }} />
-              Inbox
-            </a>
-          </li>
-          <li>
-            <a href="/help" className="nav-link text-white  help-margin">
+            <a href="/help" className="navlink-sidebar text-white  help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
               Help
             </a>
           </li>
-          <li>
-            <a href="/notifications" className="nav-link text-white">
-              <svg className="bi me-2" width="16" height="16">
-              </svg>
-              <i className="fa-solid fa-bell icon" style={{ fontSize: '1.25em' }} />
-              Notifications
-            </a>
-          </li>
+
         </ul>
         <hr className='hr'/>
         <div className="dropdown">

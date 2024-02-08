@@ -3,8 +3,9 @@ import "/workspaces/Proyecto-Final-Gestion-Front/src/css/register.css"
 export const Register = () => {
 
     return (
+        <div className="register-body">
         <section className="signup">
-            <div className="container">
+            <div className="register-container">
                 <div className="signup-content">
                     <div className="signup-form">
                         <h2 className="form-title">Sign up</h2>
@@ -41,7 +42,7 @@ export const Register = () => {
                 </div>
             </div>
         </section>
+    </div>
     )
-
 }
 
