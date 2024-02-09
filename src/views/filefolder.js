@@ -4,7 +4,7 @@ import { Sidebar } from '../components/application/sidebar'
 export const FileFolder = () => {
     return (
         <>
-            <div className="orden">
+            <div className="orden-filefolder">
                 <Sidebar />
                 <div className="filefolderbody container flex-grow-1 light-style container-p-y">
                     <div className="container-m-nx container-m-ny bg-lightest mb-3">

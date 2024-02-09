@@ -1,8 +1,8 @@
 .chart-container{
    display: inline-block;
-   
 }
 
-.orden{
+.orden-charts{
    display: flex;
+   width: 100%;
 }

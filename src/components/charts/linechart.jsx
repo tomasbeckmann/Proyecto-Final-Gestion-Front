@@ -64,8 +64,8 @@ const data = [
 export default function LineChartComponent() {
   return (
     <LineChart
-      width={500}
-      height={400}
+      width={300}
+      height={200}
       data={data}
       margin={{
         top: 5,

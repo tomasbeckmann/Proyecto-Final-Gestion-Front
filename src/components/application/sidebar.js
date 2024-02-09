@@ -14,7 +14,7 @@ export const Sidebar = () => {
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/home" className="navlink-sidebar text-white active list-margin" aria-current="page">
+            <a href="/linecharts" className="navlink-sidebar text-white active list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-house icon" style={{ fontSize: '1.25em' }} />

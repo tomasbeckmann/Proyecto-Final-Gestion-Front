@@ -56,8 +56,8 @@ const data = [
 export default function AreaChartComponent() {
   return (
     <AreaChart
-      width={500}
-      height={400}
+      width={300}
+      height={200}
       data={data}
       margin={{
         top: 10,

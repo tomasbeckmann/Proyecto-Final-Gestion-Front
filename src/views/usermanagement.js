@@ -5,11 +5,11 @@ export const UserManagement = () => {
 
     return (
         <>
-            <div className="orden">
+            <div className="orden-usermanagement">
                 <Sidebar />
                 <div className="usermanagement-body">
                     <div className="container mt-3 mb-4">
-                        <div className="col-lg-9 mt-4 mt-lg-0">
+                        <div className="col-lg-10 mt-4 mt-lg-0">
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
@@ -59,7 +59,7 @@ export const UserManagement = () => {
                                         <div className="text-center mt-3 mt-sm-3">
                                             <ul className="pagination justify-content-center mb-0">
                                                 <li className="page-item disabled"> <span className="page-link">Prev</span> </li>
-                                                <li className="page-item active" aria-current="page"><span className="page-link">1 </span> <span className="sr-only">(current)</span></li>
+                                                <li className="page-item active" aria-current="page"><span className="page-link">1 </span> {/* <span className="sr-only">(current)</span> */}</li>
                                                 <li className="page-item"><a className="page-link" href="#">2</a></li>
                                                 <li className="page-item"><a className="page-link" href="#">3</a></li>
                                                 <li className="page-item"><a className="page-link" href="#">...</a></li>

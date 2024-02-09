@@ -14,7 +14,7 @@ export const Usersidebar = () => {
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/userprofile" className="navlink-usersidebar text-white list-margin" aria-current="page">
+            <a href="/home" className="navlink-usersidebar text-white list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
@@ -22,15 +22,7 @@ export const Usersidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/userdocuments" className="navlink-usersidebar text-white list-margin">
-              <svg className="bi me-2" width="16" height="16">
-              </svg>
-              <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
-              Documents
-            </a>
-          </li>
-          <li>
-            <a href="/usertasks" className="navlink-sidebar text-white list-margin">
+            <a href="/tasklistuser" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
 
               </svg>

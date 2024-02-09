@@ -1,9 +1,11 @@
 .usermanagement-body{
     background-color: #f8f9fa!important;
+    width: 85%;
 }
 
-.orden{
+.orden-usermanagement{
     display: flex;
+    width: 100%;
 }
 
 .p-4 {

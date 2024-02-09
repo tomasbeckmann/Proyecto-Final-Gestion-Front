@@ -73,8 +73,47 @@ export const UserProfile = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr  className='tr-userprofile'>
                       <td>Carnet de Identidad</td>
+                      <td>Aprobado</td>
+                      <td>
+                        <button className='userprofile-button'>Editar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Cargar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Ver Documento</button>
+                      </td>
+                    </tr>
+                    <tr  className='tr-userprofile'>
+                      <td>Licencia de Conducir</td>
+                      <td>Aprobado</td>
+                      <td>
+                        <button className='userprofile-button'>Editar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Cargar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Ver Documento</button>
+                      </td>
+                    </tr>
+                    <tr  className='tr-userprofile'>
+                      <td>Examen de Salud</td>
+                      <td>Aprobado</td>
+                      <td>
+                        <button className='userprofile-button'>Editar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Cargar</button>
+                      </td>
+                      <td>
+                        <button className='userprofile-button'>Ver Documento</button>
+                      </td>
+                    </tr>
+                    <tr  className='tr-userprofile'>
+                      <td>Antecedentes Penales</td>
                       <td>Aprobado</td>
                       <td>
                         <button className='userprofile-button'>Editar</button>

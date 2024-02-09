@@ -1,6 +1,10 @@
 .filefolderbody{
     margin-top:20px;
 }
+.orden-filefolder{
+    display: flex;
+	width: 100%;
+}
 .button-spacing{
 margin-left: 10px;
 }

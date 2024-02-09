@@ -1,12 +1,12 @@
-import "../css/tasklist.css"
-import { Sidebar } from '../components/application/sidebar'
+import "../css/tasklistuser.css"
+import { Usersidebar } from '../components/application/user-sidebar'
 
-export const TaskList = () => {
+export const TaskListUser = () => {
 	return (
 		<>
-			<div className="orden-tasklist">
-				<Sidebar />
-					<div className="tasklist-body col-10">
+			<div className="orden-tasklistuser">
+				<Usersidebar />
+					<div className="tasklistuser-body col-10">
 						<div className="container">
 							<div className="row">
 								<div className="col-lg-12">
@@ -15,7 +15,6 @@ export const TaskList = () => {
 											<table className="table user-list">
 												<thead>
 													<tr>
-														<th className="text-center"><span>Usuario</span></th>
 														<th className="text-center"><span>Tarea</span></th>
 														<th className="text-center"><span>Estatus</span></th>
 														<th className="text-center"><span>Fecha Inicio</span></th>
@@ -25,11 +24,6 @@ export const TaskList = () => {
 												</thead>
 												<tbody>
 													<tr>
-														<td>
-															<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
-															<a href="#" className="user-link">Jhon Doe</a>
-															<span className="user-subhead">Admin</span>
-														</td>
 														<td className="text-center">
 															Actualizar Licencia de Conducir
 														</td>
@@ -67,15 +61,7 @@ export const TaskList = () => {
 												</tbody>
 											</table>
 										</div>
-										<ul className="pagination pull-right">
-											<li><a href="#"><i className="fa fa-chevron-left"></i></a></li>
-											<li><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li><a href="#"><i className="fa fa-chevron-right"></i></a></li>
-										</ul>
+										
 									</div>
 								</div>
 							</div>

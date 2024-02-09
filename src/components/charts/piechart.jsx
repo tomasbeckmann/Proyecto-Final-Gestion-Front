@@ -42,7 +42,7 @@ class PieChartComponent extends React.Component {
 
   render() {
     return (
-      <PieChart width={550} height={400}>
+      <PieChart width={300} height={200}>
         <Pie
           data={this.pieData}
           dataKey="value"

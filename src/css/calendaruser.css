@@ -1,9 +1,9 @@
-.orden-calendar{
+.orden-calendaruser{
     display: flex;
     justify-items: center;
 }
 
-.container-calendar{
+.container-calendaruser{
     max-width: 100%;
 }
 
