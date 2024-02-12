@@ -61,19 +61,21 @@ export const FileUpload = () => {
   const inputRef = React.createRef();
 
   return (
-    <div
-      className={filebody `drag-image ${isActive ? 'active' : ''}`}
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
-      onDrop={handleDrop}
-      ref={dropAreaRef}
-    >
-      <div className="icon">
-      <i className="fa-solid fa-cloud-arrow-up" />
+    <div className='filebody'>
+      <div
+        className={`drag-image ${isActive ? 'active' : ''}`}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        ref={dropAreaRef}
+      >
+        <div className="icon">
+          <i className="fa-solid fa-cloud-arrow-up" />
+        </div>
+        <h6 ref={dragTextRef}>Drag & Drop File Here</h6>
+        <span>OR</span>
+        <button onClick={handleButtonClick}>Browse File</button>
       </div>
-      <h6 ref={dragTextRef}>Drag & Drop File Here</h6>
-      <span>OR</span>
-      <button onClick={handleButtonClick}>Browse File</button>
     </div>
   );
 };

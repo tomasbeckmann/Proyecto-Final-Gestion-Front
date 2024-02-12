@@ -1,5 +1,5 @@
 .userprofile-body{
-    border-radius: 20px;
+    border-radius: 5px;
     margin-top:20px;
     color: #1a202c;
     text-align: left;
@@ -100,13 +100,14 @@ table {
   .userprofile-button {
     padding: 5px 10px;
     cursor: pointer;
-    background-color: #21B8E6;
+    background-color: #206eeb;
     color: #fff;
     border: none;
+
   }
   
   button:hover {
-    background-color: #3CE6C9;
+    background-color: #21b8e6;
   }
 
 .tr-userprofile{

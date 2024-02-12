@@ -5,7 +5,7 @@ export const Usersidebar = () => {
   return (
     <main>
       <div className="d-flex flex-column flex-shrink-0 p-3  dash-container" style={{ width: '280px' }}>
-        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="/home" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <svg className="bi me-2" width="40" height="32">
           </svg>
           <i class="fa-solid fa-tractor title-icon"></i>

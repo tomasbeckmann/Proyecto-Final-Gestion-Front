@@ -48,12 +48,43 @@ export const Register = () => {
     }
   };
 
+  const { actions } = useContext(Context)
+  const navigate = useNavigate();
+  const handleRegister = async (event) => {
+
+    event.preventDefault()
+    const data = Object.fromEntries(
+      new FormData(event.target)
+    )
+    console.log(data)
+
+    fetch('https://octopus-app-epbnm.ondigitalocean.app/user', {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" }
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.ok) { navigate("/login") }
+        if (response.status === 200) { return response.json() }
+      })
+      .catch(err => {
+        if (err.status === 401) { Logout() } //volver a enviar datos de manera correcta ? 
+        if (err.status === 500) {
+          return setTestApiFetchError({
+            'error_type': "SERVER_ERROR",
+            "error": true
+          })
+        }  
+      });
+  }
+
   return (
     <section className="signup">
       <div className="container">
         <div className="signup-content">
-            <div className="signup-form">
-            <form method="POST" className="register-form" id="register-form" onSubmit={handleSubmit}>
+          <div className="signup-form">
+            <form method="POST" className="register-form" id="register-form" onSubmit={handleRegister}>
               <div className="form-group">
                 <label htmlFor="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                 <input
@@ -142,7 +173,7 @@ export const Register = () => {
               </div>
 
               <div className="form-group">
-              <input
+                <input
                   type="checkbox"
                   className="form-check-input"
                   id="agree-term"
@@ -160,13 +191,24 @@ export const Register = () => {
           </div>
 
           <div className="signup-image">
-          <h2 className="form-title">Registro de Usuarios</h2>
+            <h2 className="form-title">Registro de Usuarios</h2>
             <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" alt="sing up image" /></figure>
-            <a href="/login/" className="signup-image-link">Ya soy miembro</a>
+            <a href="/login" className="signup-image-link">Ya soy miembro</a>
           </div>
         </div>
       </div>
     </section>
   );
-};
+};/* 
+const userData = await fetch(URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+})
 
+if (response.ok) {
+  navigate("/login") 
+} else 
+
+const response = await userData.json()
+*/

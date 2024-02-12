@@ -13,7 +13,9 @@ export const FileFolder = () => {
 
                         <div className="file-manager-actions container-p-x py-2">
                             <div>
+                                <a href="https://ubiquitous-fortnight-g4q9pjwrvqvgcv45q-3000.app.github.dev/fileupload">
                                 <button type="button" className="btn btn-primary mr-2"><i className="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
+                                </a>
                                 <button type="button" className="button-spacing btn btn-secondary icon-btn mr-2" disabled=""><i className="ion ion-md-cloud-download"></i></button>
                                 <div className="btn-group button-spacing mr-2">
                                     <button type="button" className="button-spacing btn btn-default md-btn-flat dropdown-toggle px-2" data-toggle="dropdown"><i className="ion ion-ios-settings"></i></button>

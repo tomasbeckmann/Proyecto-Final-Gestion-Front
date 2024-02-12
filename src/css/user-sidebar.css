@@ -77,11 +77,11 @@ hr{
   background-color: transparent;
   border: 0;
 }
-.btn-toggle:hover,
+/* .btn-toggle:hover,
 .btn-toggle:focus {
   color: rgba(0, 0, 0, .85);
   background-color: #3CE6C9;
-}
+} */
 
 .btn-toggle::before {
   width: 1.25em;

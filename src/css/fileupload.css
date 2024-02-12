@@ -11,6 +11,7 @@
   justify-content: center;
   flex-direction: column;
   
+  
 }
 
 .drag-image.active {
@@ -62,16 +63,21 @@
 }
 
 
-filebody {
+.filebody {
   font-size: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 50vh;
   background: linear-gradient(
     to right,
     #96BEE6,
     #C5CFE9 
   );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
