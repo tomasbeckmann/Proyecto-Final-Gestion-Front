@@ -85,16 +85,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .clear {
     clear: both; }
   
-  .register-body {
-    font-size: 13px;
-    line-height: 1.8;
-    color: #222;
-    background: #f8f8f8;
-    font-weight: 400;
-    font-family: Poppins; }
-  
   .register-container {
-    width: 900px;
+
+    width: 800px;
     background: #fff;
     margin: 0 auto;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
@@ -153,13 +146,14 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     overflow: hidden; }
   
   .signup-image {
+    
     margin: 0 55px; }
   
   .form-title {
     margin-bottom: 33px; }
   
   .signup-image {
-    margin-top: 45px; }
+    margin-top: 30px; }
   
   figure {
     margin-bottom: 50px;
@@ -203,6 +197,10 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .register-form {
     width: 100%; }
   
+    .test{
+        font-size: 100px;
+    }
+
   .form-group {
     position: relative;
     margin-bottom: 25px;

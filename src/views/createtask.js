@@ -1,57 +1,46 @@
 import React from 'react';
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/createtask.css"
+import "../css/createtask.css"
+import { useContext, useState } from 'react';
+import { Context } from "../store/appcontext"
+import { useNavigate } from 'react-router-dom';
 
 export const CreateTask = () => {
+
+    const { actions } = useContext(Context)
+    const navigate = useNavigate();
+
+    const handleTask = async (event) => {
+
+        event.preventDefault();
+        const inputData = Object.fromEntries(new FormData(event.target));
+        actions.fetchTask(inputData)
+
+    }
     return (
         <div className='createtask-body'>
-            <div className="row d-flex justify-content-center .createtask-container">
-                <div className="col-md-8">
-                    <div className="card-hover-shadow-2x mb-3 card">
-                        <div className="card-header-tab card-header">
-                            <div className="card-header-title font-size-lg text-capitalize font-weight-normal">Task Lists</div>
-                        </div>
-                        <div className="scroll-area-sm">
-                            <perfect-scrollbar className="ps-show-limits">
-                                <div style={{ position: 'static' }} className="ps ps--active-y">
-                                    <div className="ps-content">
-                                        <ul className="list-group list-group-flush">
-                                            <li className="list-group-item">
-                                                <div className="todo-indicator bg-warning"></div>
-                                                <div className="widget-content p-0">
-                                                    <div className="widget-content-wrapper">
-                                                        <div className="widget-content-left mr-2">
-                                                            <div className="custom-checkbox custom-control">
-                                                                <input className="custom-control-input"
-                                                                    id="exampleCustomCheckbox12" type="checkbox" /><label className="custom-control-label"
-                                                                        for="exampleCustomCheckbox12">&nbsp;</label>
-                                                            </div>
-                                                        </div>
-                                                        <div className="widget-content-left">
-                                                            <div className="widget-heading">Call Sam For payments <div className="badge badge-danger ml-2">Rejected</div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="widget-content-right">
-                                                            <button className="border-0 btn-transition btn btn-outline-success">
-                                                                <i className="fa fa-check"></i></button>
-                                                            <button className="border-0 btn-transition btn btn-outline-danger">
-                                                                <i className="fa fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </perfect-scrollbar>
-                        </div>
-                        <div className="d-block text-right card-footer">
-                            <button className="mr-2 btn btn-link btn-sm">Cancel</button>
-                            <button className="btn btn-primary">Add Task</button>
-                        </div>
+        <section className="createtask">
+            <div className="login-container">
+                <div className="createtask-content">
+                    <div className="createtask-form">
+                        <h2 className="form-title">Create Task</h2>
+                        <form onSubmit={handleTask} className="register-form" id="login-form">
+                            <div className="form-group">
+                                <label htmlFor="your_name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="your_name" placeholder="name" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="description" id="your_description" placeholder="description" />
+                            </div>
+                            <div className="form-group form-button">
+                                <input type="submit" name="createtask" id="createtask" className="form-submit" value="Submit" />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+    </div>
+
     );
 };

@@ -1,4 +1,4 @@
-import '/workspaces/Proyecto-Final-Gestion-Front/src/css/user-sidebar.css';
+import '../../css/user-sidebar.css';
 /* import 'bootstrap/dist/css/bootstrap.min.css' */
 
 export const Usersidebar = () => {

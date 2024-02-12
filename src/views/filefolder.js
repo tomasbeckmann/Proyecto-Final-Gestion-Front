@@ -1,4 +1,4 @@
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/filefolder.css"
+import "../css/filefolder.css"
 import { Sidebar } from '../components/application/sidebar'
 
 export const FileFolder = () => {

@@ -30,7 +30,7 @@ export const Navigation = (props) => {
           </Nav>
           <Nav>
             <Nav.Link href="#deets">CONTACTANOS</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2} href="/login">
               LOGIN
             </Nav.Link>
           </Nav>

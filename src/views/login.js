@@ -1,5 +1,5 @@
 import React from 'react';
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/login.css"
+import "../css/login.css"
 import { useContext, useState } from 'react';
 import { Context } from "../store/appcontext"
 import { useNavigate } from 'react-router-dom';
@@ -8,21 +8,12 @@ export const SignIn = () => {
 
     const { actions } = useContext(Context)
     const navigate = useNavigate();
-    const [formData, setFormData] = useState({});
 
     const handleLogin = async (event) => {
 
-        /*     event.preventDefault()
-            const data = Object.fromEntries(
-                new FormData(event.target)
-            )  
-            console.log(data)
-         */
-
         event.preventDefault();
         const inputData = Object.fromEntries(new FormData(event.target));
-      actions.fetchLogin()
-        console.log(event.target)
+        actions.fetchLogin(inputData)
 
     }
 
@@ -33,7 +24,7 @@ export const SignIn = () => {
                     <div className="signin-content">
                         <div className="signin-image">
                             <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" /></figure>
-                            <a href="#" className="signup-image-link">Create an account</a>
+                            <a href="/register" className="signup-image-link">Create an account</a>
                         </div>
                         <div className="signin-form">
                             <h2 className="form-title">Sign In</h2>

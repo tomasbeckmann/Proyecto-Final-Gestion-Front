@@ -4,7 +4,7 @@ import AreaChartComponent from '../components/charts/areachart';
 import BarChartComponent from '../components/charts/barchart';
 import PieChartComponent from '../components/charts/piechart';
 import { Sidebar } from '../components/application/sidebar'
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/charts.css"
+import "../css/charts.css"
 
 // import ChatComponent from '../components/chat/chat';
 

@@ -1,4 +1,4 @@
-import '/workspaces/Proyecto-Final-Gestion-Front/src/css/sidebar.css';
+import '../../css/sidebar.css';
 /* import 'bootstrap/dist/css/bootstrap.min.css' */
 
 export const Sidebar = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '/workspaces/Proyecto-Final-Gestion-Front/src/css/fileupload.css';
+import '../css/fileupload.css';
 
 export const FileUpload = () => {
   const [file, setFile] = useState(null);

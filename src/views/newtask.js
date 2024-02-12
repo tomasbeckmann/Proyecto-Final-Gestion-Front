@@ -1,6 +1,6 @@
 import React from "react";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/newtask.css"
+import "../css/newtask.css"
 import {
   MDBBtn,
   MDBCard,

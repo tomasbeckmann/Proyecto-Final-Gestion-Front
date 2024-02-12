@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/login.css";
+import React from 'react';
+import { useContext, useState } from 'react';
+/* import { useNavigate } from 'react-router-dom'; */
+import { Context } from "../store/appcontext"
+import "../css/login.css";
 import { validateEmail } from '../components/application/registerutil';
 
 const PasswordErrorMessage = () => (
@@ -38,9 +41,16 @@ export const Register = () => {
     setRole("role");
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const { actions } = useContext(Context)
+  /*   const navigate = useNavigate(); */
+
+  const handleRegister = async (event) => {
+
+    event.preventDefault();
     if (isFormValid) {
+      const inputData = Object.fromEntries(new FormData(event.target));
+      console.log(Object.fromEntries(new FormData(event.target)));
+      actions.fetchRegister(inputData);
       alert("Account created!");
       clearForm();
     } else {
@@ -48,46 +58,17 @@ export const Register = () => {
     }
   };
 
-  const { actions } = useContext(Context)
-  const navigate = useNavigate();
-  const handleRegister = async (event) => {
-
-    event.preventDefault()
-    const data = Object.fromEntries(
-      new FormData(event.target)
-    )
-    console.log(data)
-
-    fetch('https://octopus-app-epbnm.ondigitalocean.app/user', {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-type": "application/json" }
-    })
-      .then(response => response.json())
-      .then(response => {
-        if (response.ok) { navigate("/login") }
-        if (response.status === 200) { return response.json() }
-      })
-      .catch(err => {
-        if (err.status === 401) { Logout() } //volver a enviar datos de manera correcta ? 
-        if (err.status === 500) {
-          return setTestApiFetchError({
-            'error_type': "SERVER_ERROR",
-            "error": true
-          })
-        }  
-      });
-  }
-
   return (
-    <section className="signup">
-      <div className="container">
-        <div className="signup-content">
+    <section className="signup row d-flex justify-content-center mt-3">
+      <div className="register-container col-8 mt-5">
+        <div className="signup-content ">
           <div className="signup-form">
             <form method="POST" className="register-form" id="register-form" onSubmit={handleRegister}>
               <div className="form-group">
                 <label htmlFor="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                 <input
+                
+                className='fs-3'
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   onBlur={() => validateFirstName()}
@@ -102,6 +83,7 @@ export const Register = () => {
               <div className="form-group">
                 <label htmlFor="lastname"><i className="zmdi zmdi-account material-icons-name"></i></label>
                 <input
+                className='fs-3'
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   onBlur={() => validateLastName()}
@@ -112,10 +94,21 @@ export const Register = () => {
                 />
                 {!validateLastName() && <p className="FieldError">Este campo es requerido</p>}
               </div>
+              <div className="form-group">
+                <label htmlFor="rut"><i className="zmdi zmdi-account material-icons-name"></i></label>
+                <input
+                className='fs-3'
+                  type="text"
+                  name="rut"
+                  id="rut"
+                  placeholder="Ingresa tu rut del usuario"
+                />
+              </div>
 
               <div className="form-group">
                 <label htmlFor="email"><i className="zmdi zmdi-email"></i></label>
                 <input
+                className='fs-3'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   onBlur={() => validateEmailField()}
@@ -130,6 +123,7 @@ export const Register = () => {
               <div className="form-group">
                 <label htmlFor="pass"><i className="zmdi zmdi-lock"></i></label>
                 <input
+                className='fs-3'
                   value={password.value}
                   type="password"
                   onChange={(e) =>
@@ -137,8 +131,8 @@ export const Register = () => {
                   }
                   onBlur={() => validatePasswordField()}
                   placeholder="Ingresa el password del usuario"
-                  name="pass"
-                  id="pass"
+                  name="password"
+                  id="password"
                 />
                 {password.isTouched && !validatePasswordField() && <PasswordErrorMessage />}
               </div>
@@ -146,6 +140,7 @@ export const Register = () => {
               <div className="form-group">
                 <label htmlFor="re-pass"><i className="zmdi zmdi-lock-outline"></i></label>
                 <input
+                  className='fs-3'
                   value={confirmPassword}
                   type="password"
                   onChange={(e) => setConfirmPassword(e.target.value)}
@@ -163,13 +158,18 @@ export const Register = () => {
                 <label htmlFor="rol"><i className="zmdi zmdi-lock-outline"></i>
                   Ingresa el rol del colaborador:  <sup></sup>
                 </label >
-                <select className='col-6 form-control' value={role} onChange={(e) => setRole(e.target.value)} onBlur={() => validateRoleField()}>
+                <select
+                  className='col-6 fs-3 form-control'
+                  value={role} onChange={(e) => setRole(e.target.value)}
+                  onBlur={() => validateRoleField()}
+                  placeholder="Repite el password del usuario"
+                  name="userrol_id"
+                  id="userrol_id">
                   <option>Elige un rol</option>
-                  <option value="Administrador">Administrador</option>
-                  <option value="Supervisor">Supervisor</option>
-                  <option value="Colaborador">Colaborador</option>
+                  <option value="1">Administrador</option>
+                  <option value="2">Colaborador</option>
                 </select>
-                {!validateRoleField() && <p className="FieldError">Selecciona un rol</p>}
+                {!validateRoleField() && <p className="FieldError"></p>}
               </div>
 
               <div className="form-group">
@@ -179,9 +179,6 @@ export const Register = () => {
                   id="agree-term"
                   name="agree-term"
                 />
-                <label htmlFor="agree-term" className="label-agree-term">
-                  <span><span></span></span>Confirmo la creación de un nuevo, he leido su <a href="#" className="term-service">descriptor de cargo</a>
-                </label>
               </div>
 
               <div className="form-group form-button">
@@ -189,15 +186,15 @@ export const Register = () => {
               </div>
             </form>
           </div>
-
-          <div className="signup-image">
+          <div className="signup-image mt-0">
             <h2 className="form-title">Registro de Usuarios</h2>
-            <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" alt="sing up image" /></figure>
+            <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" alt="" /></figure>
             <a href="/login" className="signup-image-link">Ya soy miembro</a>
           </div>
         </div>
-      </div>
+      </div>  
     </section>
+
   );
 };/* 
 const userData = await fetch(URL, {

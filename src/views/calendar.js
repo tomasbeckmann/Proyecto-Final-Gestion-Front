@@ -1,7 +1,7 @@
 import React from 'react';
 import CalendarComponent from '../components/calendar/calendar';
 import { Sidebar } from '../components/application/sidebar'
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/calendar.css"
+import "../css/calendar.css"
 
 
 export const Calendar = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import CalendarComponent from '../components/calendar/calendar';
 import { Usersidebar } from '../components/application/user-sidebar'
-import "/workspaces/Proyecto-Final-Gestion-Front/src/css/calendaruser.css"
+import "../css/calendaruser.css"
 
 
 
