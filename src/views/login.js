@@ -22,7 +22,6 @@ export const SignIn = () => {
                     <div className="signin-content">
                         <div className="signin-image">
                             <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" /></figure>
-                            <a href="/register" className="signup-image-link">Create an account</a>
                         </div>
                         <div className="signin-form">
                             <h2 className="form-title">Sign In</h2>
@@ -50,3 +49,5 @@ export const SignIn = () => {
         </div>
     );
 };
+
+

@@ -1,6 +1,7 @@
 .userprofile-body{
     border-radius: 5px;
     margin-top:20px;
+    margin-bottom:20px;
     color: #1a202c;
     text-align: left;
     background-color: #C5CFE9;  
@@ -18,14 +19,6 @@
     padding: 5px;
     display: flex;
     align-items: center;
-}
-
-.center{
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
 }
 
 .margintop{

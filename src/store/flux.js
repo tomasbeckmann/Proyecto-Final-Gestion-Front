@@ -77,6 +77,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
+			fetchDelete: (data) => {
+				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
+				fetch("http://localhost:3001/user", {
+					method: "PUT",
+					body: JSON.stringify(data),
+					headers: {
+						"content-type": "application/json",
+					},
+				}).then((response) => {
+					console.log("response", response)
+					return response.json()
+				}).then((data2) => {
+					console.log("data", data2)
+				})
+				/* 					.catch((error) =>
+										console.log(error)) */
+			},
+			fetchPut: (data) => {
+				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
+				fetch("http://localhost:3001/user", {
+					method: "PUT",
+					body: JSON.stringify(data),
+					headers: {
+						"content-type": "application/json",
+					},
+				}).then((response) => {
+					console.log("response", response)
+					return response.json()
+				}).then((data2) => {
+					console.log("data", data2)
+				})
+				/* 					.catch((error) =>
+										console.log(error)) */
+			},
 		}
 	}
 }

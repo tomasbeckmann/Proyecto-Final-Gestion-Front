@@ -25,8 +25,7 @@ export const UserManagement = () => {
                                         <table className="table manage-candidates-top mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>Candidate Name</th>
-                                                    <th className="text-center">Status</th>
+                                                    <th>Lista de Usuarios</th>
                                                     <th className="action text-right">Action</th>
                                                 </tr>
                                             </thead>
@@ -38,7 +37,8 @@ export const UserManagement = () => {
                                                             name= {user.name}
                                                             lastname= {user.last_name}
                                                             rut= {user.rut}
-                                                            userrol_id= {user.userrol_id}
+                                                            userrol_id= {user.user_rol_id}
+                                                            user_email= {user.email}
                                                         />
                                                     )
                                                 })

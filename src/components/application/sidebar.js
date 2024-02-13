@@ -18,7 +18,7 @@ export const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-house icon" style={{ fontSize: '1.25em' }} />
-              Home
+              Inicio
             </a>
           </li>
           <li>
@@ -27,15 +27,23 @@ export const Sidebar = () => {
 
               </svg>
               <i className="fa-solid fa-users icon" style={{ fontSize: '1.25em' }} />
-              User Management
+              Administrar Usuarios
             </a>
           </li>
+          <li>
+            <a href="/register" className="navlink-sidebar text-white list-margin">
+              <svg className="bi me-2" width="16" height="16">
+              </svg>
+              <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
+              Crear Usuario
+            </a>
+          </li>  
           <li>
             <a href="/tasklist" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-list-check icon" style={{ fontSize: '1.25em' }} />
-              Task Management
+              Administrar Tareas
             </a>
           </li>
       
@@ -44,7 +52,7 @@ export const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-calendar-days icon" style={{ fontSize: '1.25em' }} />
-              Calendar
+              Calendario
             </a>
           </li>
           <li>
@@ -53,32 +61,30 @@ export const Sidebar = () => {
 
               </svg>
               <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
-              Files folder
+              Carpeta de Archivos
             </a>
-          </li>
-        
+          </li>              
           <li>
             <a href="/help" className="navlink-sidebar text-white  help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
-              Help
+              Ayuda
             </a>
           </li>
-
         </ul>
         <hr className='hr'/>
         <div className="dropdown">
           <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
-            <strong>User number 1</strong>
+            <strong>Usuario número 1</strong>
           </a>
           <ul className="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="dropdownUser1">
-            <li><a className="dropdown-item" href="#">Profile</a></li>
-            <li><a className="dropdown-item" href="#">Settings</a></li>
+            <li><a className="dropdown-item" href="#">Perfil</a></li>
+            <li><a className="dropdown-item" href="#">Configuración</a></li>
             <li><a className="dropdown-item" href="#">???</a></li>
             <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Sign out</a></li>
+            <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>
           </ul>
         </div>
       </div>
