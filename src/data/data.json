@@ -4,13 +4,12 @@
     "paragraph": "Optimiza la gestión documental y reduce riesgos contractuales. Supervisa tareas con profesionales validados. Control total para fortalecer tu empresa."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Transforma la gestión documental y eleva la productividad de tu organización al siguiente nivel. La solución integral para simplificar y potenciar los procesos en tu organización. ",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
-    ],
+      "Eficiencia sin Esfuerzo: Simplifica la gestión documental y las tareas diarias con nuestra plataforma intuitiva y fácil de usar.",
+      "Alertas y Recordatorios: Olvídate de los plazos vencidos. Recibe alertas y recordatorios automáticos para que nunca te pierdas una fecha importante.",
+      "Estadísticas en Tiempo Real: Obtén información valiosa sobre el estado actual de tu organización con estadísticas en tiempo real que facilitan la toma de decisiones."
+          ],
     "Why2": [
       "Aliquip ex ea commodo",
       "Lorem ipsum dolor",
@@ -67,67 +66,51 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-magnifying-glass",
+      "name": "Servicio Integral de Control Documental",
+      "text": "Centraliza, organiza y accede fácilmente a todos tus documentos. Gestiona permisos para un control total de la información."},
+    {
+      "icon": "fa fa-triangle-exclamation",
+      "name": "Alertas y Recordatorios Personalizados",
+      "text": "Configura alertas para plazos importantes y tareas críticas. Recibe recordatorios automáticos para maximizar la eficiencia."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-calendar-xmark",
+      "name": "Vencimiento de Documentos Simplificado",
+      "text": "Olvídate de los vencimientos con nuestro sistema de seguimiento automático. Renueva documentos de manera proactiva para evitar interrupciones."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-chart-line",
+      "name": "Data Analitycs en Tiempo Real",
+      "text": "Accede a estadísticas actualizadas al momento sobre el estado de tu organización. Toma decisiones informadas para mejorar la productividad."
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-codepen",
+      "name": "Personalización y Escalabilidad",
+      "text": "Adapta la plataforma según las necesidades específicas de tu organización. Escala los servicios a medida que tu empresa crece."
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-robot",
+      "name": "Automatización de Flujos de Trabajo",
+      "text": "Optimiza procesos repetitivos y libera tiempo para tareas estratégicas. Crea flujos de trabajo personalizados que se adapten a la dinámica de tu organización."
     }
   ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"DataGather ha revolucionado nuestra gestión documental. La automatización de flujos de trabajo y las alertas personalizadas nos han permitido ser más eficientes y organizados. ¡Imprescindible para cualquier empresa seria!\"",
+      "name": "Marcos López - Director de Operaciones, Digital Net"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"DataGather ha sido clave en nuestra búsqueda de eficiencia. La integración con nuestras herramientas existentes y las estadísticas en tiempo real nos han proporcionado información valiosa para la toma de decisiones estratégicas.\"",
+      "name": "Juan Rodríguez - CEO, InnovaTech SA"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    }
+      "text": "\"DataGather ha simplificado nuestra gestión de documentos y nos ha permitido centrarnos en lo más importante: nuestro equipo. Las notificaciones instantáneas y la facilidad de implementación fueron un cambio de juego para nosotros.\"",
+      "name": "Andres Sánchez - Gerente de Recursos Humanos, Empresa ABC"
+    }    
   ],
   "Team": [
     {
@@ -157,19 +140,24 @@
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Control documental",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-magnifying-glass",
+      "title": "Control Documental Avanzado",
+      "text": "Gestiona y organiza todos tus documentos de forma centralizada. Asigna permisos y accesos según roles para un control total."
     },
     {
       "icon": "fa fa-bullhorn",
-      "title": "Checklist y formularios",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Alertas y Recordatorios Personalizables",
+      "text": "Configura alertas y recordatorios según tus necesidades. Evita vencimientos y maximiza la eficiencia en tus operaciones."
     },
     {
-      "icon": "fa fa-group",
-      "title": "Control vehiculos y maquinarias",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-circle-exclamation",
+      "title": "Manejo de Vencimiento de Documentos",
+      "text": "Rastrea automáticamente las fechas de vencimiento. Actúa proactivamente para renovar documentos críticos."
+    },
+    {
+      "icon": "fa fa-chart-pie",
+      "title": "Estadísticas en Tiempo Real",
+      "text": "Visualiza el rendimiento y la productividad de tu organización. Toma decisiones informadas basadas en datos actualizados al momento."
     }
   ]
 }

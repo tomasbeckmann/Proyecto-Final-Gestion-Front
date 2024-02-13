@@ -6,6 +6,8 @@ const PasswordErrorMessage = () => (
   <p className="FieldError">Password debe tener al menos 8 caracteres</p>
 );
 
+const isNameValid = (name) => /^[A-Za-z\u00C0-\u017F\s]+$/.test(name);
+
 export const Registers = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,7 +16,8 @@ export const Registers = () => {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () =>
-    firstName && validateEmail(email) && password.value.length >= 8 && role !== "role";
+    firstName && isNameValid(firstName) && lastName && isNameValid(lastName) &&
+    validateEmail(email) && password.value.length >= 8 && role !== "role";
 
   const clearForm = () => {
     setFirstName("");
@@ -41,7 +44,12 @@ export const Registers = () => {
             </label>
             <input
               value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={(e) => {
+                const newName = e.target.value;
+                if (isNameValid(newName)) {
+                  setFirstName(newName);
+                }
+              }}
               placeholder="Ingresa los nombres del usuario"
             />
           </div>
@@ -49,7 +57,12 @@ export const Registers = () => {
             <label>Apellidos</label>
             <input
               value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={(e) => {
+                const newLastName = e.target.value;
+                if (isNameValid(newLastName)) {
+                  setLastName(newLastName);
+                }
+              }}
               placeholder="Ingresa los apellidos del usuario"
             />
           </div>
@@ -60,7 +73,7 @@ export const Registers = () => {
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Ingresa correo electronico del usuario"
+              placeholder="Ingresa correo electrónico del usuario"
             />
           </div>
           <div className="Field">
