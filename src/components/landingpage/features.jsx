@@ -5,7 +5,7 @@ export const Features = (props) => {
     <div id="features" className=" text-center">
       <div className="container">
         <div className=" col-md-10 col-md-offset-1 section-title">
-          <h2 className="mt-5 pt-5">Funcionalidades</h2>
+          <h2 className="">Funcionalidades</h2>
         </div>
         <div className="row">
           {props.data
