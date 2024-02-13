@@ -10,20 +10,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ token, user })
 			},
 			fetchLogin: (data) => {
-				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch("http://localhost:3001/login", {
 					method: "POST",
 					body: JSON.stringify(data),
 					headers: {
 						"content-type": "application/json",
 					},
-				}).then((response) => {
-					return response.json()
-				}).then((data) => {
-					console.log("data", data)
 				})
-/* 					.catch((error) =>
-						console.log(error)) */
+					.then((response) => {
+						if (response.status === 200) {
+							window.location.href = "/home";
+						} if (response.status === 401) {
+							const errorMessage = "El usuario no existe"
+							response.json().then((data) => {
+								alert(errorMessage);
+							});
+						} if (response.status === 400) {
+							const errorMessage2 = "Contraseña incorrecta"
+							response.json().then((data) => {
+								alert(errorMessage2);
+							});
+						}
+					})
+					.catch((error) => {
+						console.log("Error:", error);
+					});
 			},
 			fetchRegister: (data2) => {
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
@@ -39,8 +50,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}).then((data2) => {
 					console.log("data", data2)
 				})
-/* 					.catch((error) =>
-						console.log(error)) */
+				/* 					.catch((error) =>
+										console.log(error)) */
 			},
 			fetchUserData() {
 				fetch(`http://localhost:3001/users`)
@@ -63,12 +74,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}).then((data) => {
 					console.log("data", data)
 				})
-/* 					.catch((error) =>
-						console.log(error)) */
-			}
+				/* 					.catch((error) =>
+										console.log(error)) */
+			},
 		}
 	}
-};
+}
+
 
 
 

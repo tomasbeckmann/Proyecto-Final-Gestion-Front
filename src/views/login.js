@@ -10,11 +10,9 @@ export const SignIn = () => {
     const navigate = useNavigate();
 
     const handleLogin = async (event) => {
-
         event.preventDefault();
         const inputData = Object.fromEntries(new FormData(event.target));
         actions.fetchLogin(inputData)
-
     }
 
     return (
@@ -52,18 +50,3 @@ export const SignIn = () => {
         </div>
     );
 };
-
-
-/*     let URL = "https://octopus-app-epbnm.ondigitalocean.app/login"
-
-    const userData = await fetch(URL,{
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(data)
-    })
-    const response = await userData.json()
- 
-    actions.SetCredential(response.token, response.user) 
-    
-    navigate("/home")
- */
