@@ -1,22 +1,25 @@
 import { useContext, useState } from 'react';
 import { Context } from "../../store/appcontext"
-export const UserCard = ({ name, lastname, rut, userrol_id, user_email }) => {
+import { useNavigate } from 'react-router-dom';
+
+export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id }) => {
 
     const { actions } = useContext(Context)
+    const navigate = useNavigate();
 
     const handlePut = async (event) => {      
-            const inputData = Object.fromEntries(new FormData(event.target));
-            console.log(Object.fromEntries(new FormData(event.target)));
-            actions.fetchRegister(inputData);
+            event.preventDefault();
+            actions.fetchUser(user_id);
+            navigate("/updateuser")
     };
 
     const handleDelete = async (event) => {
-        event.preventDefault();
         const data = {
             "deleted": 1,
-            "email": user_email
+            "id": user_id
         };
-        actions.fetchDelete(data);
+        await actions.fetchDelete(data);
+        await actions.fetchUserData()
     };
 
     let userid = { userrol_id }
@@ -29,6 +32,12 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email }) => {
         }
     }
     const userRoleString = generateStringFromNumber(userid)
+
+    function confirmAndDelete() {
+        if (window.confirm("Are you sure you want to delete?")) {
+          handleDelete();
+        }
+      }
 
     return (
         <tr className="candidates-list">
@@ -55,7 +64,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email }) => {
                 <ul className="list-unstyled fs-3 mb-0 d-flex justify-content-center">
                     {/*                     <li><a href="#" className="text-primary" data-toggle="tooltip" title="" data-original-title="view"><i className="far fa-eye"></i></a></li> */}
                     <li><a onClick={handlePut} className="text-info" data-toggle="tooltip" title="" data-original-title="Edit"><i className="fas fa-pencil-alt"></i></a></li>
-                    <li><a onClick={handleDelete} className="text-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i className="far fa-trash-alt"></i></a></li>
+                    <li><a onClick={confirmAndDelete} className="text-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i className="far fa-trash-alt"></i></a></li>
                 </ul>
             </td>
         </tr>

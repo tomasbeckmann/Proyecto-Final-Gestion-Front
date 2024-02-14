@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			token: "",
 			user: {},
-			userdata: []
+			userdata: [],
+			taskdata: []
 		},
 		actions: {
 			SetCredential: (token, user) => {
@@ -53,8 +54,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
-			fetchUserData() {
+			fetchUserData : () => {
 				fetch(`http://localhost:3001/users`)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ userdata: [...data.data] })
+					})
+					.catch(error => console.log("error to obtain contact data", error))
+			},
+			fetchUser: (user_id) => {
+				fetch(`http://localhost:3001/user/${user_id}`)
 					.then(resp => resp.json())
 					.then(data => {
 						setStore({ userdata: [...data.data] })
@@ -77,9 +86,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
-			fetchDelete: (data) => {
+			fetchDelete: (data) => { 
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
-				fetch("http://localhost:3001/user", {
+				fetch(`http://localhost:3001/user/${data.id}`, {
 					method: "PUT",
 					body: JSON.stringify(data),
 					headers: {
@@ -87,9 +96,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 				}).then((response) => {
 					console.log("response", response)
-					return response.json()
-				}).then((data2) => {
-					console.log("data", data2)
+					return response.json()					
+				}).then(() => {
+					
 				})
 				/* 					.catch((error) =>
 										console.log(error)) */
@@ -110,6 +119,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				/* 					.catch((error) =>
 										console.log(error)) */
+			},
+			fetchTaskData : () => {
+				fetch(`http://localhost:3001/tasks`)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ taskdata: [...data.data] })
+					})
+					.catch(error => console.log("error to obtain contact data", error))
 			},
 		}
 	}

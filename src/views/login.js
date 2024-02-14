@@ -36,10 +36,7 @@ export const SignIn = () => {
                   src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0="
                   alt="Construction site"
                 />
-              </figure>
-              <a href="/register" className="signup-image-link">
-                Crear una cuenta de usuario
-              </a>
+              </figure>            
             </div>
             <div className="signin-form">
               <h2 className="form-title">Sign In</h2>
@@ -57,7 +54,7 @@ export const SignIn = () => {
                     placeholder="E-mail"
                     className={isEmailValid() ? '' : 'invalid-input'}
                   />
-                  {!isEmailValid() && <span className="warning-message">Email o valido</span>}
+                  {!isEmailValid() && <span className="warning-message">Email no valido</span>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="your_pass">
@@ -72,7 +69,7 @@ export const SignIn = () => {
                     placeholder="Password"
                     className={isPasswordValid() ? '' : 'invalid-input'}
                   />
-                  {!isPasswordValid() && <span className="warning-message">Password debe tener mínimo 8 caracteres</span>}
+                  {!isPasswordValid() && <span className="warning-message">Contraseña debe tener mínimo 8 caracteres</span>}
                 </div>
                 <div className="form-group">
                   <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />

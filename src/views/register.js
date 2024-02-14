@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from "../store/appcontext"
 import "../css/login.css";
 import { validateEmail } from '../components/application/registerutil';
-import { Sidebar } from '../components/application/sidebar'
 
 const PasswordErrorMessage = () => (
   <p className="FieldError">Password debe tener al menos 8 caracteres</p>
@@ -62,16 +61,14 @@ export const Register = () => {
   return (
     <>
       <div className="orden-register">
-        <Sidebar />
         <section className="signup row d-flex justify-content-center mt-3">
-          <div className="register-container col-6 mt-5">
+          <div className="register-container col-12 mt-5">
             <div className="signup-content ">
               <div className="signup-form">
                 <form method="POST" className="register-form" id="register-form" onSubmit={handleRegister}>
                   <div className="form-group">
                     <label htmlFor="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                     <input
-
                       className='fs-3'
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}

@@ -5,7 +5,6 @@ export const TaskListUser = () => {
 	return (
 		<>
 			<div className="orden-tasklistuser">
-				<Usersidebar />
 					<div className="tasklistuser-body col-10">
 						<div className="container">
 							<div className="row">

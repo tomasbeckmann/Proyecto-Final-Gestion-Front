@@ -23,7 +23,6 @@ export const Calendar = () => {
   return (
     <>
       <div className="orden-calendar">
-        <Sidebar />
         <div className='container-calendar col-6'>
           <section className='gradient'>
             <div className="container">

@@ -5,7 +5,6 @@ export const FileFolder = () => {
     return (
         <>
             <div className="orden-filefolder">
-                <Sidebar />
                 <div className="filefolderbody container flex-grow-1 light-style container-p-y">
                     <div className="container-m-nx container-m-ny bg-lightest mb-3">
                         <h1>DataGather</h1>

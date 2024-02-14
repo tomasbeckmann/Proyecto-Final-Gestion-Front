@@ -12,7 +12,6 @@ export const GraphicsChart = () => {
   return (
     <>
       <div className='orden-charts'>
-        <Sidebar />
         <div className='chart-container col-10'>
           <h1 className="text-center">Line and Area Charts</h1>
           <div className="container ">

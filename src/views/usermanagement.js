@@ -1,5 +1,4 @@
 import "../css/usermanagement.css"
-import { Sidebar } from '../components/application/sidebar'
 import { UserCard } from '../components/application/usercard'
 import { Context } from "../store/appcontext"
 import React, { useContext, useEffect } from "react";
@@ -15,7 +14,6 @@ export const UserManagement = () => {
     return (
         <>
             <div className="orden-usermanagement">
-                <Sidebar />
                 <div className="usermanagement-body">
                     <div className="container mt-3 mb-4">
                         <div className="col-lg-10 mt-4 mt-lg-0">
@@ -31,16 +29,20 @@ export const UserManagement = () => {
                                             </thead>
                                             <tbody>
                                                 {store.userdata && store.userdata.map((user, index) => {
-                                                    return (
-                                                        <UserCard
-                                                            key = {index}
-                                                            name= {user.name}
-                                                            lastname= {user.last_name}
-                                                            rut= {user.rut}
-                                                            userrol_id= {user.user_rol_id}
-                                                            user_email= {user.email}
-                                                        />
-                                                    )
+                                                    console.log(store.userdata.deleted)
+                                                    if (user.deleted === false) {
+                                                        return (
+                                                            <UserCard
+                                                                key={index}
+                                                                name={user.name}
+                                                                lastname={user.last_name}
+                                                                rut={user.rut}
+                                                                userrol_id={user.user_rol_id}
+                                                                user_email={user.email}
+                                                                user_id={user.id}
+                                                            />
+                                                        )
+                                                    } 
                                                 })
                                                 }
                                             </tbody>

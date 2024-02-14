@@ -13,12 +13,10 @@ html {
   height: -webkit-fill-available;
 }
 
-main {
+.main-usersidebar {
   display: flex;
   flex-wrap: nowrap;
   height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
   font-family: Roboto;
   font-size: 18px;
 }

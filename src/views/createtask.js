@@ -10,27 +10,39 @@ export const CreateTask = () => {
     const navigate = useNavigate();
 
     const handleTask = async (event) => {
-
         event.preventDefault();
         const inputData = Object.fromEntries(new FormData(event.target));
+        console.log(inputData)
         actions.fetchTask(inputData)
-
     }
+
     return (
         <div className='createtask-body'>
         <section className="createtask">
             <div className="login-container">
                 <div className="createtask-content">
                     <div className="createtask-form">
-                        <h2 className="form-title">Create Task</h2>
+                        <h2 className="form-title">Crear Tarea</h2>
                         <form onSubmit={handleTask} className="register-form" id="login-form">
                             <div className="form-group">
-                                <label htmlFor="your_name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="your_name" placeholder="name" />
+                                <label htmlFor="name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Nombre" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="your_description" placeholder="description" />
+                                <label htmlFor="last_name"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="last_name" id="last_name" placeholder="Apellido" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="start_date"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="start_date" id="start_date" placeholder="Fecha de Inicio" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="end_date"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="end_date" id="end_date" placeholder="Fecha de Termino" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="description"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="description" id="description" placeholder="Descripción" />
                             </div>
                             <div className="form-group form-button">
                                 <input type="submit" name="createtask" id="createtask" className="form-submit" value="Submit" />

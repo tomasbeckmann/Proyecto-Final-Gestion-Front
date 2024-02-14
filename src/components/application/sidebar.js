@@ -3,8 +3,8 @@ import '../../css/sidebar.css';
 
 export const Sidebar = () => {
   return (
-    <main>
-      <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container" style={{ width: '280px' }}>
+    <main className='main-sidebar'>
+      <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container vw-50 " >
         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <svg className="bi me-2" width="40" height="32">
           </svg>
@@ -46,6 +46,14 @@ export const Sidebar = () => {
               Administrar Tareas
             </a>
           </li>
+          <li>
+            <a href="/createtask" className="navlink-sidebar text-white list-margin">
+              <svg className="bi me-2" width="16" height="16">
+              </svg>
+              <i className="fa-solid fa-pencil" style={{ fontSize: '1.25em' }} />
+              Agregar Tareas
+            </a>
+          </li>
       
           <li>
             <a href="/calendar" className="navlink-sidebar text-white list-margin">
@@ -65,7 +73,7 @@ export const Sidebar = () => {
             </a>
           </li>              
           <li>
-            <a href="/help" className="navlink-sidebar text-white  help-margin">
+            <a href="/helpadmin" className="navlink-sidebar text-white  help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />

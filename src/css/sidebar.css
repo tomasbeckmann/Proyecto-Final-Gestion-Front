@@ -14,12 +14,10 @@
   }
  */
   
-  main {
+ .main-sidebar {
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
     font-family: Roboto;
     font-size: 18px;
   }

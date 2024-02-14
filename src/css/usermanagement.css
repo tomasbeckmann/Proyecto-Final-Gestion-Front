@@ -3,14 +3,12 @@ body{
 }
 
 .usermanagement-body{
-    background-color: #f8f9fa!important;
-    width: 85%;
+    background-color: #f8f9fa!important; 
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
-.orden-usermanagement{
-    display: flex;
-    width: 100%;
-}
+
 
 .p-4 {
     padding: 1.5rem!important;

@@ -4,7 +4,6 @@ import {Usersidebar} from '../components/application/user-sidebar'
 export const UserProfile = () => {
   return (
     <>
-  
     <div className="container userprofile-body">
       <div className="main-body">
         <div className="row gutters-sm">

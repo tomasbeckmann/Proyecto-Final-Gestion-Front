@@ -1,10 +1,6 @@
 import React from 'react';
 import CalendarComponent from '../components/calendar/calendar';
-import { Usersidebar } from '../components/application/user-sidebar'
 import "../css/calendaruser.css"
-
-
-
 
 export const UserCalendar = () => {
 
@@ -25,7 +21,6 @@ export const UserCalendar = () => {
   return (
     <>
       <div className="orden-calendaruser">
-        <Usersidebar />
         <div className='container-calendar col-6'>
         <section className='gradient'>
           <div className="container">
