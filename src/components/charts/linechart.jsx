@@ -11,61 +11,61 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    an: 3000,
-    pv: 2400,
-    amt: 2400
+    name: "Agosto 2023",
+    Al_dia: 4000,
+    Por_Vencer: 3000,
+    Vencidos: 2400,
+    
   },
   {
-    name: "Page B",
-    uv: 3000,
-    an: 3000,
-    pv: 1398,
-    amt: 2210
+    name: "Septiembre 2023",
+    Al_dia: 3000,
+    Por_Vencer: 3000,
+    Vencidos: 1398,
+    
   },
   {
-    name: "Page C",
-    uv: 2000,
-    an: 3000,
-    pv: 9800,
-    amt: 2290
+    name: "Octubre 2023",
+    Al_dia: 2000,
+    Por_Vencer: 3000,
+    Vencidos: 9800,
+    
   },
   {
-    name: "Page D",
-    uv: 2780,
-    an: 3000,
-    pv: 3908,
-    amt: 2000
+    name: "Noviembre 2023",
+    Al_dia: 2780,
+    Por_Vencer: 3000,
+    Vencidos: 3908,
+    
   },
   {
-    name: "Page E",
-    uv: 1890,
-    an: 3000,
-    pv: 4800,
-    amt: 2181
+    name: "Diciembre 2023",
+    Al_dia: 1890,
+    Por_Vencer: 3000,
+    Vencidos: 4800,
+    
   },
   {
-    name: "Page F",
-    uv: 2390,
-    an: 3000,
-    pv: 3800,
-    amt: 2500
+    name: "Enero 2024",
+    Al_dia: 2390,
+    Por_Vencer: 3000,
+    Vencidos: 3800,
+    
   },
   {
-    name: "Page G",
-    uv: 3490,
-    an: 3000,
-    pv: 4300,
-    amt: 2100
+    name: "Febrero 2024",
+    Al_dia: 3490,
+    Por_Vencer: 3000,
+    Vencidos: 4300,
+    
   }
 ];
 
 export default function LineChartComponent() {
   return (
     <LineChart
-      width={300}
-      height={200}
+      width={500}
+      height={250}
       data={data}
       margin={{
         top: 5,
@@ -81,13 +81,13 @@ export default function LineChartComponent() {
       <Legend />
       <Line
         type="monotone"
-        dataKey="pv"
+        dataKey="Al_dia"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      <Line type="monotone" dataKey="an" stroke="#ff7300" />
-      <Line type="monotone" dataKey="amt" stroke="#0088cc" />
+      <Line type="monotone" dataKey="Por_Vencer" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="Vencidos" stroke="#ff7300" />
+     
     </LineChart>
   );
 }

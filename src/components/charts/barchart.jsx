@@ -11,54 +11,55 @@ import {
 
 const data = [
   {
-    name: "01/01/2024",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
+    name: "Agosto 2023",
+    Iniciadas: 4000,
+    Problemas: 2400,
+    Terminadas: 2400
   },
   {
-    name: "02/01/2024",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
+    name: "Septiembre 2023",
+    Iniciadas: 3000,
+    Problemas: 1398,
+    Terminadas: 2210
   },
   {
-    name: "03/01/2024",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290
+    name: "Octubre 2023",
+    Iniciadas: 2000,
+    Problemas: 9800,
+    Terminadas: 2290
   },
   {
-    name: "04/01/2024",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
+    name: "Noviembre 2023",
+    Iniciadas: 2780,
+    Problemas: 3908,
+    Terminadas: 2000
   },
   {
-    name: "05/01/2024",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
+    name: "Diciembre 2023",
+    Iniciadas: 1890,
+    Problemas: 4800,
+    Terminadas: 2181
   },
   {
-    name: "06/01/2024",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
+    name: "Enero 2024",
+    Iniciadas: 2390,
+    Problemas: 3800,
+    Terminadas: 2500
   },
   {
-    name: "07/01/2024",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
+    name: "Febrero 2024",
+    Iniciadas: 3490,
+    Problemas: 4300,
+    Terminadas: 2100
   }
 ];
 
 export default function BarChartComponent() {
   return (
     <BarChart
-      width={300}
-      height={200}
+      width={500}
+      height={250
+      }
       data={data}
       margin={{
         top: 20,
@@ -72,9 +73,9 @@ export default function BarChartComponent() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-      <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
-      <Bar dataKey="amt" stackId="a" fill="#000000" />
+      <Bar dataKey="Iniciadas" stackId="a" fill="#8884d8" />
+      <Bar dataKey="Problemas" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="Terminadas" stackId="a" fill="#000000" />
     </BarChart>
   );
 }
