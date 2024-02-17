@@ -1,5 +1,6 @@
 .tasklist-body{
 	margin-top: 30px;
+	overflow-y: scroll;
 }
 .orden-tasklist{
     display: flex;
@@ -8,10 +9,7 @@
 .td-style{
     width: 20%;
 }
-.status{
-    font-size: 100%;
-}
-/* USER LIST TABLE */
+
 .user-list tbody td > img {
     position: relative;
 	max-width: 50px;
@@ -20,12 +18,12 @@
 }
 .user-list tbody td .user-link {
 	display: block;
-	font-size: 2.5em;
+	font-size: 15px;
 	padding-top: 3px;
 	margin-left: 60px;
 }
 .user-list tbody td .user-subhead {
-	font-size: 1.5em;
+	font-size: 1em;
 	font-style: italic;
     font-weight: 400;
 }

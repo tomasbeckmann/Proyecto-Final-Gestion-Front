@@ -10,18 +10,14 @@ export const GenerateTask = ({name, lastname, task_description, start_date, end_
     const handlePutTask = async (event) => {      
             event.preventDefault();
             actions.fetchUser(user_id);
-            navigate("/createtask")
+            navigate("/updatetask")
     };
 
-    const handleDeleteTask = async (event) => {
-        event.preventDefault();
-        const data = {
-            "deleted": 1,
-            "id": user_id
-        };
-        await actions.fetchDelete(data);
-        await actions.fetchUserData()
-    };
+    function confirmAndDelete() {
+        if (window.confirm("Are you sure you want to delete?")) {
+          actions.fetchTaskDelete(user_id)
+        }
+      }
 
     return (
         <tr>
@@ -48,13 +44,13 @@ export const GenerateTask = ({name, lastname, task_description, start_date, end_
                         <i className="fa fa-search-plus fa-stack-1x fa-inverse"></i>
                     </span>
                 </a> */}
-                <a href="#" className="table-link">
+                <a onClick={handlePutTask} className="table-link">
                     <span className="fa-stack">
                         <i className="fa fa-square fa-stack-2x"></i>
                         <i className="fa fa-pencil fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
-                <a href="#" className="table-link danger">
+                <a onClick={confirmAndDelete} className="table-link danger">
                     <span className="fa-stack">
                         <i className="fa fa-square fa-stack-2x"></i>
                         <i className="fa fa-trash-o fa-stack-1x fa-inverse"></i>

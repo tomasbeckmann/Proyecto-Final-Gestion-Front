@@ -17,7 +17,17 @@ export const SignIn = () => {
     if (isFormValid()) {
       const inputData = Object.fromEntries(new FormData(event.target));
       console.log(inputData)
-      actions.fetchLogin(inputData).then(() => navigate("/home"));
+      actions.fetchLogin(inputData).then((user) => {
+        console.log(user.rol)
+        if(user.rol === 1){
+          navigate("/homeadmin")
+        }else if(user.rol === 2) {
+          navigate("/home")
+        } else {
+          navigate("/login")
+        }
+      })
+      .catch((error) => console.log(error))
     }
   };
 

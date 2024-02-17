@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Context } from "../store/appcontext"
 
 
-export const CreateTask = () => {
+export const UpdateTask = () => {
 
     const { actions } = useContext(Context)
 
@@ -49,7 +49,7 @@ export const CreateTask = () => {
                                 <input type="text" name="status" id="status" placeholder="Estatus" />
                             </div>
                             <div className="form-group form-button">
-                                <input type="submit" name="createtask" id="createtask" className="form-submit" value="Agregar Tarea" />
+                                <input type="submit" name="createtask" id="createtask" className="form-submit" value="Guardar Tarea" />
                             </div>
                         </form>
                      
@@ -61,5 +61,3 @@ export const CreateTask = () => {
 
     );
 };
-
-   

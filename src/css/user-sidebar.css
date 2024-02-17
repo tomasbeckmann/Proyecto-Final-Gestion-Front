@@ -22,9 +22,11 @@ html {
 }
 
 .logo{
-  height: 20vh;
-  width: 20vh;
-  align-self: center;
+
+  width: 28vh;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 
@@ -52,7 +54,7 @@ html {
 }
 .help-margin{
   margin-top: 10px;
-  margin-bottom: 280px;
+  margin-bottom: 10px;
 }
 
 .bi {

@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			token: "",
 			user: {},
 			userdata: [],
-			task: {},
+			task: [],
 			taskdata: []
 		},
 		actions: {
@@ -24,20 +24,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 							response.json().then((data) => {
 								alert(errorMessage);
 							});
+							throw new Error("ERROR")
 						} if (response.status === 400) {
 							const errorMessage2 = "Contraseña incorrecta"
 							response.json().then((data) => {
 								alert(errorMessage2);
 							});
+							throw new Error("ERROR")
+						} if (response.status === 422) {
+							throw new Error("ERROR");
 						}
 					})
 					.then((response) => {
 						setStore({ token: response.token, user: response.user })
-						console.log(response.token)
+						return response.user
 					})
-					.catch((error) => {
-						console.log("Error:", error);
-					});
 			},
 			fetchRegister: (data2) => {
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
@@ -58,11 +59,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			fetchUserData: () => {
 				const storage = getStore()
-				fetch(`http://localhost:3001/users`, {
-					headers: {
-						Authorization: `Bearer ${storage.token}`
-					}
-				},
+				const fetchOptions = {}
+				if (storage.token.length > 0) {
+					fetchOptions.headers = {Authorization: `Bearer ${storage.token}`}
+				}
+				fetch(`http://localhost:3001/users`,
+				fetchOptions
 				)
 					.then(resp => resp.json())
 					.then(data => {
@@ -79,12 +81,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error to obtain contact data", error))
 			},
 			fetchTask: (data) => {
+				const storage = getStore()
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch("http://localhost:3001/task", {
 					method: "POST",
 					body: JSON.stringify(data),
 					headers: {
 						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
 					},
 				}).then((response) => {
 					return response.json()
@@ -112,12 +116,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 										console.log(error)) */
 			},
 			fetchPut: (data) => {
+				const storage = getStore()
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch("http://localhost:3001/user", {
 					method: "PUT",
 					body: JSON.stringify(data),
 					headers: {
 						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
 					},
 				}).then((response) => {
 					console.log("response", response)
@@ -156,6 +162,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log("error to obtain task data", error))
 			},
+			fetchTaskDelete: (id) => {
+				fetch(`http://localhost:3001/task/${id}`, {
+				  method: "DELETE",
+				  headers: {
+					"content-type": "application/json",
+				  },
+				})
+				  .then((response) => {
+					if (!response.ok) {
+					  throw new Error(`HTTP error! status: ${response.status}`);
+					}
+					console.log("response", response);
+					return response.json();
+				  })
+				  .catch((error) => {
+					console.log("Error:", error);
+				  });
+			  },
+			
 		}
 	}
 }

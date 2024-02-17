@@ -1,6 +1,9 @@
 .orden-calendar{
     display: flex;
     justify-items: center;
+    height: 90vh;
+    width: 150vh;
+    overflow-y: scroll;
 }
 
 .card-custom-calendar {

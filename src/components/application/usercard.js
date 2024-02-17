@@ -20,6 +20,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
         };
         await actions.fetchDelete(data);
         await actions.fetchUserData()
+       
     };
 
     let userid = { userrol_id }

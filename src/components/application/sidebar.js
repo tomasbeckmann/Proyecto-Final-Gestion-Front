@@ -2,7 +2,7 @@ import '../../css/sidebar.css';
 import { Context } from '../../store/appcontext';
 import React, { useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { Logo } from "../../images/1.png"
+import  Logo  from "../../images/datagather_logo.png"
 
 
 export const Sidebar = () => {
@@ -18,12 +18,14 @@ export const Sidebar = () => {
     <main className='main-sidebar'>
       <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container vw-50 " >
         <Link href="/" relative="path" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <img src= {Logo}/>
+          <img 
+          className="logo"
+          src= {Logo}/>
         </Link>
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-          <Link to="/linecharts" relative="path" className="navlink-sidebar text-white active list-margin" aria-current="page">
+          <Link to="/homeadmin" relative="path" className="navlink-sidebar text-white active list-margin" aria-current="page">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-house icon" style={{ fontSize: '1.25em' }} />
@@ -99,7 +101,7 @@ export const Sidebar = () => {
             <li><a className="dropdown-item" href="#">Perfil</a></li>
             <li><a className="dropdown-item" href="#">Configuración</a></li>
             <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>
+            <li><a className="dropdown-item" href="/login">Cerrar sesión</a></li>
           </ul>
         </div>
       </div>
