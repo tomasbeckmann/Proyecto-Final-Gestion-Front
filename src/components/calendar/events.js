@@ -1,39 +1,34 @@
 const events = [
-    { title: "AZUL +5", start: getDate("YEAR-MONTH-02") },
-    { title: "AZUL +5", start: getDate("YEAR-MONTH-03") },
-    { title: "caraysello +5", start: getDate("2024-02-03") },
+    { title: "Renovar cedula de identidad", start: getDate("YEAR-MONTH-02") },
+    { title: "Renovar Licencia de conducir", start: getDate("YEAR-MONTH-03") },
+    { title: "Charla de Higiene y seguridadd", start: getDate("2024-02-03") },
     
     {
-      title: "LAVAR CAMIONES",
+      title: "Levantamiento de datos de Sistema de Gestión integrada",
       start: getDate("YEAR-MONTH-06"),
       end: getDate("YEAR-MONTH-10"),
       backgroundColor: "green"
     },
-    { title: "AMARILLO -5", start: getDate("YEAR-MONTH-07") },
-    { title: "AZUL +5", start: getDate("YEAR-MONTH-08") },
+    { title: "Auditoría documental", start: getDate("YEAR-MONTH-07") },
+    { title: "Compra de drone ", start: getDate("YEAR-MONTH-08") },
     {
-      title: "AMARILLO -5",
+      title: "Reunion Mensual",
       start: getDate("YEAR-MONTH-09"),
       backgroundColor: "yellow",
       textColor: "black"
     },
     {
-      title: "LECTURA +20",
+      title: "Informe avances proyecto",
       start: getDate("YEAR-MONTH-09"),
       backgroundColor: "purple"
     },
   
-    { title: "AZUL +5", start: getDate("YEAR-MONTH-28") },
+    { title: "Cotización limpieza", start: getDate("YEAR-MONTH-28") },
     {
-      title: "AZUL +5",
+      title: "Visita a terreno",
       start: getDate("YEAR-MONTH-22"),
       backgroundColor: "red",
       textColor: "black"
-    },
-    {
-      start: getDate("YEAR-MONTH-23"),
-      end: getDate("YEAR-MONTH-24"),
-      allDay: true
     }
   ];
   

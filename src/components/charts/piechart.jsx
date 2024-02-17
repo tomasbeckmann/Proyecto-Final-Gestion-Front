@@ -29,7 +29,7 @@ class PieChartComponent extends React.Component {
           className="custom-tooltip"
           style={{
             backgroundColor: "#ffffff",
-            padding: "35px",
+            padding: "25px",
             border: "1px solid #cccc"
             }}
         >
@@ -42,14 +42,14 @@ class PieChartComponent extends React.Component {
 
   render() {
     return (
-      <PieChart width={300} height={200}>
+      <PieChart width={400} height={250}>
         <Pie
           data={this.pieData}
           dataKey="value"
           nameKey="name"
-          cx="50%"
-          cy="50%"  
-          outerRadius={150}
+          cx="40%"
+          cy="47%"  
+          outerRadius={100}
           fill="#8884d8"
         >
           {this.pieData.map((entry, index) => (
