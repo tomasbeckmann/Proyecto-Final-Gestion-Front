@@ -16,7 +16,8 @@ export const SignIn = () => {
     // Valida el email antes de llamar al fetch login 
     if (isFormValid()) {
       const inputData = Object.fromEntries(new FormData(event.target));
-      actions.fetchLogin(inputData);
+      console.log(inputData)
+      actions.fetchLogin(inputData).then(() => navigate("/home"));
     }
   };
 
@@ -39,7 +40,7 @@ export const SignIn = () => {
               </figure>            
             </div>
             <div className="signin-form">
-              <h2 className="form-title">Sign In</h2>
+              <h2 className="form-title">Inicio de sesión</h2>
               <form onSubmit={handleLogin} className="register-form" id="login-form">
                 <div className="form-group">
                   <label htmlFor="your_email">
@@ -71,12 +72,12 @@ export const SignIn = () => {
                   />
                   {!isPasswordValid() && <span className="warning-message">Contraseña debe tener mínimo 8 caracteres</span>}
                 </div>
-                <div className="form-group">
+               {/*  <div className="form-group">
                   <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />
                   <label htmlFor="remember-me" className="logib-label label-agree-term">
                     <span><span></span></span>Recordarme
                   </label>
-                </div>
+                </div> */}
                 <div className="form-group form-button">
                   <input type="submit" name="signin" id="signin" className="form-submit" value="Log in" />
                 </div>

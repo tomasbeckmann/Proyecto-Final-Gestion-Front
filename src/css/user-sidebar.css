@@ -21,6 +21,13 @@ html {
   font-size: 18px;
 }
 
+.logo{
+  height: 20vh;
+  width: 20vh;
+  align-self: center;
+}
+
+
 .dash-container{
   background-color: #206EEB;
   height: 100%;

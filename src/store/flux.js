@@ -4,14 +4,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			token: "",
 			user: {},
 			userdata: [],
+			task: {},
 			taskdata: []
 		},
 		actions: {
-			SetCredential: (token, user) => {
-				setStore({ token, user })
-			},
 			fetchLogin: (data) => {
-				fetch("http://localhost:3001/login", {
+				return fetch("http://localhost:3001/login", {
 					method: "POST",
 					body: JSON.stringify(data),
 					headers: {
@@ -20,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then((response) => {
 						if (response.status === 200) {
-							window.location.href = "/home";
+							return response.json()
 						} if (response.status === 401) {
 							const errorMessage = "El usuario no existe"
 							response.json().then((data) => {
@@ -32,6 +30,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 								alert(errorMessage2);
 							});
 						}
+					})
+					.then((response) => {
+						setStore({ token: response.token, user: response.user })
+						console.log(response.token)
 					})
 					.catch((error) => {
 						console.log("Error:", error);
@@ -54,8 +56,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
-			fetchUserData : () => {
-				fetch(`http://localhost:3001/users`)
+			fetchUserData: () => {
+				const storage = getStore()
+				fetch(`http://localhost:3001/users`, {
+					headers: {
+						Authorization: `Bearer ${storage.token}`
+					}
+				},
+				)
 					.then(resp => resp.json())
 					.then(data => {
 						setStore({ userdata: [...data.data] })
@@ -86,7 +94,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
-			fetchDelete: (data) => { 
+			fetchDelete: (data) => {
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch(`http://localhost:3001/user/${data.id}`, {
 					method: "PUT",
@@ -96,9 +104,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 				}).then((response) => {
 					console.log("response", response)
-					return response.json()					
+					return response.json()
 				}).then(() => {
-					
+
 				})
 				/* 					.catch((error) =>
 										console.log(error)) */
@@ -120,13 +128,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
-			fetchTaskData : () => {
-				fetch(`http://localhost:3001/tasks`)
+			fetchTaskData: () => {
+				const storage = getStore()
+				fetch(`http://localhost:3001/tasks`,{
+					headers: {
+						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
+					}
+				})
 					.then(resp => resp.json())
 					.then(data => {
 						setStore({ taskdata: [...data.data] })
 					})
 					.catch(error => console.log("error to obtain contact data", error))
+			},
+			fetchTaskUser: (id) => {
+				const storage = getStore()
+				fetch(`http://localhost:3001/task/${id}`,{
+					headers: {
+						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
+					}
+				})
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ task: data })
+					})
+					.catch(error => console.log("error to obtain task data", error))
 			},
 		}
 	}

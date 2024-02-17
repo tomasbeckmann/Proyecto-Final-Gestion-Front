@@ -1,7 +1,25 @@
 import '../css/userprofile.css'
-import {Usersidebar} from '../components/application/user-sidebar'
+import { Context } from '../store/appcontext';
+import React, { useContext, useEffect } from 'react';
 
 export const UserProfile = () => {
+
+  const { store, actions } = useContext(Context)
+
+  useEffect(() => {
+      actions.fetchUserData()
+      console.log(store.user)
+  }, [])
+
+  function generateStringFromNumber(number) {
+      if (number === 1) {
+          return "Administrador"
+      } else {
+          return "Colaborador"
+      }
+  }
+  const userRoleString = generateStringFromNumber(store.user.id)
+
   return (
     <>
     <div className="container userprofile-body">
@@ -15,19 +33,19 @@ export const UserProfile = () => {
                   <div className="mt-3">
                     <ul className="nav nav-pills flex-column mb-auto">
                       <li>
-                        <h4>John Doe</h4>
+                        <h4>{`${store.user.name} ${store.user.last_name}`}</h4>
                       </li>
                       <li>
                         <i className="fa-solid fa-suitcase" style={{ fontSize: '1.25em' }} />
-                        <p className="text font-size-sm">Full Stack Developer</p>
+                        <p className="text font-size-sm">{userRoleString}</p>
                       </li>
                       <li className='datalist'>
-                        <i className="fa-solid fa-phone" style={{ fontSize: '1.25em' }} />
-                        <p className="text font-size-sm">+569123123123123</p>
+                        <i className="fa-solid fa-" style={{ fontSize: '1.25em' }} />
+                        <p className="text font-size-sm">{store.user.rut}</p>
                       </li>
                       <li>
                         <i className="fa-solid fa-envelope" style={{ fontSize: '1.25em' }} />
-                        <p className="text font-size-sm">jhondoe@gmail.com</p>
+                        <p className="text font-size-sm">{store.user.email}</p>
                       </li>
                       <li>
                         <p className="text font-size-sm"></p>

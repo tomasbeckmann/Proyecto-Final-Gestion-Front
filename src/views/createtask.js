@@ -1,13 +1,13 @@
 import React from 'react';
 import "../css/createtask.css"
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Context } from "../store/appcontext"
-import { useNavigate } from 'react-router-dom';
+
 
 export const CreateTask = () => {
 
     const { actions } = useContext(Context)
-    const navigate = useNavigate();
+
 
     const handleTask = async (event) => {
         event.preventDefault();
@@ -44,10 +44,15 @@ export const CreateTask = () => {
                                 <label htmlFor="description"><i className="logib-label zmdi zmdi-lock"></i></label>
                                 <input type="text" name="description" id="description" placeholder="Descripción" />
                             </div>
+                            <div className="form-group">
+                                <label htmlFor="status"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="status" id="status" placeholder="Estatus" />
+                            </div>
                             <div className="form-group form-button">
                                 <input type="submit" name="createtask" id="createtask" className="form-submit" value="Submit" />
                             </div>
                         </form>
+                     
                     </div>
                 </div>
             </div>
@@ -56,3 +61,5 @@ export const CreateTask = () => {
 
     );
 };
+
+   

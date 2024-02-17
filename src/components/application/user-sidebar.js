@@ -1,50 +1,60 @@
 import '../../css/user-sidebar.css';
-/* import 'bootstrap/dist/css/bootstrap.min.css' */
+import { Context } from '../../store/appcontext';
+import React, { useContext, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 
 export const Usersidebar = () => {
+
+  const { store, actions } = useContext(Context)
+
+  useEffect(() => {
+    actions.fetchUserData()
+    console.log(store.user)
+}, [])
+
   return (
     <main className='main-usersidebar'>
       <div className="d-flex flex-column flex-shrink-0 p-3  dash-container" style={{ width: '280px' }}>
-        <a href="/home" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <Link to="/home" relative="path" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <svg className="bi me-2" width="40" height="32">
           </svg>
           <i class="fa-solid fa-tractor title-icon"></i>
           <span className="title text-white">DataGather</span>
-        </a>
+        </Link>
         <hr className='hr' />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="/home" className="navlink-usersidebar text-white list-margin" aria-current="page">
+            <Link to="/home" relative="path" className="navlink-usersidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-user icon" style={{ fontSize: '1.25em' }} />
               Home
-            </a>
+           </Link>
           </li>
           <li>
-            <a href="/tasklistuser" className="navlink-sidebar text-white list-margin">
+          <Link to="/tasklistuser" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
-
               </svg>
               <i className="fa-solid fa-clipboard-list icon" style={{ fontSize: '1.25em' }} />
-              Tasks
-            </a>
+              Tareas
+            </Link>
           </li>
           <li>
-            <a href="/usercalendar" className="navlink-sidebar text-white list-margin">
+          <Link to="/usercalendar" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-calendar-days icon" style={{ fontSize: '1.25em' }} />
-              Calendar
-            </a>
+              Calendario
+            </Link>
           </li>
           <li>
-            <a href="/userhelp" className="navlink-sidebar text-white help-margin">
+          <Link to="/help" relative="path" className="navlink-sidebar text-white help-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-question icon" style={{ fontSize: '1.25em' }} />
-              Help
-            </a>
+              Ayuda
+            </Link>
           </li>
         
         </ul>
@@ -52,14 +62,13 @@ export const Usersidebar = () => {
         <div className="dropdown">
           <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
-            <strong>User number 1</strong>
+            <strong>{`${store.user.name} ${store.user.last_name}`}</strong>
           </a>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a className="dropdown-item" href="#">Profile</a></li>
-            <li><a className="dropdown-item" href="#">Settings</a></li>
-            <li><a className="dropdown-item" href="#">???</a></li>
+            <li><a className="dropdown-item" href="#">Perfil</a></li>
+            <li><a className="dropdown-item" href="#">Configuración</a></li>
             <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Sign out</a></li>
+            <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>
           </ul>
         </div>
       </div>
