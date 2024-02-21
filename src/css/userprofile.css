@@ -1,0 +1,112 @@
+.userprofile-body{
+    border-radius: 5px;
+    margin: 80px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #C5CFE9;  
+    font-family: Roboto;
+    font-size: 15px;
+    
+}
+
+.main-body {
+    padding: 50px;
+    margin-top: 30px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+.datalist{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.margintop{
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.documents-tab {
+    height: 62vh;
+    text-align: center;
+    overflow-y: scroll;
+}
+.card-contract{
+align-items: center;
+text-align: center;
+}
+.userprofile-card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+    padding: 20px;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #96bee6;
+  }
+  
+  .userprofile-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #206eeb;
+    color: #fff;
+    border: none;
+
+  }
+  
+  button:hover {
+    background-color: #21b8e6;
+  }
+
+.tr-userprofile{
+    height: 100px;
+}

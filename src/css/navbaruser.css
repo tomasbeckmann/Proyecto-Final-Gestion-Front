@@ -1,0 +1,26 @@
+@media (min-width:769px){
+    .responsive-nav-user {
+        display: none !important
+    }
+}
+
+.navbaruser{
+    background-color: #206EEB ;
+    color: white ;
+    font-size: 1.5em;
+    font-family: Roboto;
+    font-weight: 500;
+  
+}
+
+.nav-link-user{
+        color: white !important;
+        text-decoration: none !important;
+        margin-left: 10px;  
+}
+
+.logo-user{
+    margin: 0;
+    padding: 0;
+    height: 150px;  
+}

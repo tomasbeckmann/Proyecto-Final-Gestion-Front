@@ -149,6 +149,13 @@ hr {
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
+.logolanding{
+  vertical-align: center;
+  height: 65px;
+  width: 95px;
+  margin-top: 0 !important;
+}
+
 .section-title h2::after {
   position: absolute;
   content: "";
@@ -247,8 +254,8 @@ header .intro-text {
 /* Features Section */
 #features {
   background: #f6f6f6;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 70px;
 }
 #features i.fa {
   font-size: 38px;
@@ -264,7 +271,7 @@ header .intro-text {
 }
 /* About Section */
 #about {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 #about h3 {
   font-size: 22px;
@@ -311,7 +318,7 @@ header .intro-text {
 }
 /* Services Section */
 #services {
-  padding: 100px 0;
+  padding: 50px 0;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: #fff;
 }
@@ -403,7 +410,7 @@ header .intro-text {
 }
 /* Testimonials Section */
 #testimonials {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f6f6f6;
 }
 #testimonials i {
@@ -443,7 +450,7 @@ header .intro-text {
 }
 /* Team Section */
 #team {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 #team h4 {
   margin: 5px 0;
@@ -605,4 +612,15 @@ label {
   #about img {
     margin: 50px 0;
   }
+}
+
+.force-navbar{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.force-li{
+  display: inline-block !important;
 }
