@@ -1,5 +1,4 @@
 import "../css/filefolder.css"
-import { Sidebar } from '../components/application/sidebar'
 
 export const FileFolder = () => {
     return (

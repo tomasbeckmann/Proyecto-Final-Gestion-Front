@@ -3,18 +3,21 @@ import React from 'react';
 import { useContext, useState } from 'react';
 import { Context } from "../store/appcontext"
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export const UpdateUser = () => {
 
     const { actions } = useContext(Context)
     const navigate = useNavigate();
+    const { user_email } = useParams();
 
     const handleSubmit = async (event) => {
 
         event.preventDefault();
         const inputData = Object.fromEntries(new FormData(event.target));
+        inputData.email = user_email
         actions.fetchPut(inputData)
-
+        navigate("/usermanagement")
     }
     
     return (
@@ -26,24 +29,24 @@ export const UpdateUser = () => {
                         <h2 className="form-title">Actualizar información de Usuario</h2>
                         <form onSubmit={handleSubmit} className="register-form" id="login-form">
                             <div className="form-group">
-                                <label htmlFor="your_name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="your_name" placeholder="Nombre" />
+                                <label htmlFor="name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Nombre" />
+                            </div>
+                            <div className="last_name">
+                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="last_name" id="last_name" placeholder="Apellido" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="your_description" placeholder="Apellido" />
+                                <label htmlFor="rut"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="rut" id="rut" placeholder="Rut" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="your_description" placeholder="Rut" />
+                                <label htmlFor="password"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="password" id="password" placeholder="Contraseña" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="your_description" placeholder="Contraseña" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="your_description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="your_description" placeholder="Rol" />
+                                <label htmlFor="user_rol"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                <input type="text" name="user_rol" id="user_rol" placeholder="Rol" />
                             </div>
                             <div className="form-group form-button">
                                 <input type="submit" name="createtask" id="createtask" className="form-submit" value="Submit" />

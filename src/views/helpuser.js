@@ -3,7 +3,7 @@ export const HelpUser = () => {
         <>
             <section className="bsb-faq-3 py-3 py-md-5 py-xl-8">
                 <section className="bsb-faq-3 py-3 py-md-5 py-xl-8">
-                    <div className="container">
+                    <div className="container fs-5">
                         <div className="row justify-content-md-center">
                             <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                                 <h2 className="mb-4 display-5 text-center">Preguntas Frecuentes</h2>

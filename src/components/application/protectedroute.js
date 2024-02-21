@@ -7,7 +7,7 @@ export const ProtectedRoute = ({userrol}) => {
     if( userrol === 2){
         return <Outlet/>
     } else {
-        return <Navigate to="login"/>
+        return <Navigate to="/login"/>
     }
 
 }

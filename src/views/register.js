@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from "../store/appcontext"
 import "../css/login.css";
 import { validateEmail } from '../components/application/registerutil';
+import LogoRegister from "../images/6.png"
 
 const PasswordErrorMessage = () => (
   <p className="FieldError">Password debe tener al menos 8 caracteres</p>
@@ -189,7 +190,7 @@ export const Register = () => {
               </div>
               <div className="signup-image mt-0">
                 <h2 className="form-title">Registro de Usuarios</h2>
-                <figure><img src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0=" alt="" /></figure>
+                <figure><img src={LogoRegister} alt="" /></figure>
               </div>
             </div>
           </div>

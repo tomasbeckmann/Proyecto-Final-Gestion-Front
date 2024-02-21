@@ -1,0 +1,31 @@
+@media (min-width:768px){
+    .responsive-nav-admin {
+        display: none !important
+    }
+}
+
+.navbaradmin{
+    background-color: #206EEB ;
+    color: white ;
+    font-size: 1.5em;
+    font-family: Roboto;
+    font-weight: 500;
+    
+}
+
+.logoadmin{
+    margin: 0;
+    padding: 0;
+    height: 150px;  
+}
+
+.nav-link-admin{
+    color: white !important;
+    text-decoration: none !important;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none !important;
+}
+

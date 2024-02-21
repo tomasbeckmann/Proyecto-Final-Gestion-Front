@@ -40,7 +40,7 @@ export const UserProfile = () => {
                         <p className="text font-size-sm">{userRoleString}</p>
                       </li>
                       <li className='datalist'>
-                        <i className="fa-solid fa-" style={{ fontSize: '1.25em' }} />
+                        <i className="fa-solid fa-id-card" style={{ fontSize: '1.25em' }} />
                         <p className="text font-size-sm">{store.user.rut}</p>
                       </li>
                       <li>
@@ -104,7 +104,7 @@ export const UserProfile = () => {
                       </td>
                     </tr>
                     <tr  className='tr-userprofile'>
-                      <td>Licencia de Conducir</td>
+                      <td>OS-10</td>
                       <td>Aprobado</td>
                       <td>
                         <button className='userprofile-button'>Editar</button>

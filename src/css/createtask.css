@@ -3,11 +3,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
     display: flex;
     display: -webkit-flex; }
   
-@extend list-type-ulli;
-  list-type-ulli, .socials {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
+
 
   a:focus, a:active {
     text-decoration: none;
@@ -85,14 +81,19 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
     clear: both; }
   
   .createtask-body {
-    font-size: 13px;
-    line-height: 1.8;
+    margin: 100px;
+    font-size: 3rem !important;
+    line-height: 1.5;
     color: #222;
     background: #f8f8f8;
-    font-weight: 400;
-    font-family: Poppins; }
+    font-weight:600;
+    font-family: Roboto;
+    padding: 100px;
+    border-radius: 1em;
+   }
+    
   
-  .login-container {
+/*   .login-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,7 +112,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
     -webkit-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px; }
-  
+   */
   .display-flex {
     justify-content: space-between;
     -moz-justify-content: space-between;
@@ -196,9 +197,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
     margin-right: 75px;
     padding-left: 34px; }
   
-  .register-form {
-    width: 100%; }
-  
+
   .form-group {
     position: relative;
     margin-bottom: 25px;

@@ -8,8 +8,6 @@ body{
     overflow-y: scroll;
 }
 
-
-
 .p-4 {
     padding: 1.5rem!important;
 }
@@ -63,7 +61,8 @@ body{
 }
 
 .table.manage-candidates-top {
-    min-width: 650px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .user-dashboard-info-box .candidate-list-details ul {

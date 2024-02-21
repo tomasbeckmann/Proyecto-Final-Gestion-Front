@@ -15,8 +15,8 @@ export const Sidebar = () => {
 }, [])
 
   return (
-    <main className='main-sidebar'>
-      <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container vw-50 " >
+    <main className='main-sidebar responsive-sidebaradmin'>
+      <div className="sidebar-body d-flex flex-column flex-shrink-0 p-3 text-white dash-container w-100 " >
         <Link href="/" relative="path" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <img 
           className="logo"
@@ -35,7 +35,6 @@ export const Sidebar = () => {
           <li>
           <Link to="/usermanagement" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
-
               </svg>
               <i className="fa-solid fa-users icon" style={{ fontSize: '1.25em' }} />
               Administrar Usuarios

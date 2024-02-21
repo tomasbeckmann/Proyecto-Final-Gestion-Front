@@ -13,13 +13,25 @@
     height: -webkit-fill-available;
   }
  */
-  
+ .dropdown-menu > li > a{
+  background-color: #333;
+  color: white;
+ }
+ 
+ @media (max-width:767px){
+  .responsive-sidebaradmin{
+      display: none !important
+  }
+}
+
  .main-sidebar {
     display: flex;
     flex-wrap: nowrap;
     height: 100vh;
     font-family: Roboto;
     font-size: 18px;
+    text-decoration: none !important;
+    width: 20%;
   }
 
 
@@ -68,7 +80,15 @@
   .nav-flush .nav-link {
     border-radius: 0;
   }
-  
+
+  .logo{
+
+    width: 28vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+
   .btn-toggle {
     display: inline-flex;
     align-items: center;

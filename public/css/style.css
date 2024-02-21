@@ -149,6 +149,13 @@ hr {
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
+.logolanding{
+  vertical-align: center;
+  height: 65px;
+  width: 95px;
+  margin-top: 0 !important;
+}
+
 .section-title h2::after {
   position: absolute;
   content: "";

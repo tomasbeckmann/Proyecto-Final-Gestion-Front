@@ -2,12 +2,19 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Logo from "../../images/5.png"
 
 export const Navigation = (props) => {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary fs-3 align-middle">
       <Container>
-        <Navbar.Brand href="#home">DATAGATHER</Navbar.Brand>
+        <Navbar.Brand href="#home">
+        <img
+          alt="Logo"
+          src={Logo}
+          className='logolanding'
+        />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

@@ -9,11 +9,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			fetchLogin: (data) => {
+				const storage = getStore()
 				return fetch("http://localhost:3001/login", {
 					method: "POST",
 					body: JSON.stringify(data),
 					headers: {
 						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
+
 					},
 				})
 					.then((response) => {
@@ -41,12 +44,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 			},
 			fetchRegister: (data2) => {
+				const storage = getStore()
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch("http://localhost:3001/user", {
 					method: "POST",
 					body: JSON.stringify(data2),
 					headers: {
 						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
 					},
 				}).then((response) => {
 					console.log("response", response)
@@ -61,10 +66,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const storage = getStore()
 				const fetchOptions = {}
 				if (storage.token.length > 0) {
-					fetchOptions.headers = {Authorization: `Bearer ${storage.token}`}
+					fetchOptions.headers = { Authorization: `Bearer ${storage.token}` }
 				}
 				fetch(`http://localhost:3001/users`,
-				fetchOptions
+					fetchOptions
 				)
 					.then(resp => resp.json())
 					.then(data => {
@@ -72,14 +77,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log("error to obtain contact data", error))
 			},
-			fetchUser: (user_id) => {
-				fetch(`http://localhost:3001/user/${user_id}`)
+		/* 	fetchUser: (user_id) => {
+				const storage = getStore()
+				fetch(`http://localhost:3001/user/${user_id}`, {
+					headers: {
+						Authorization: `Bearer ${storage.token}`
+					}
+				})
 					.then(resp => resp.json())
 					.then(data => {
-						setStore({ userdata: [...data.data] })
+						setStore({ userdatarender: data })
 					})
 					.catch(error => console.log("error to obtain contact data", error))
-			},
+			}, */
 			fetchTask: (data) => {
 				const storage = getStore()
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
@@ -100,11 +110,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			fetchDelete: (data) => {
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
+				const storage = getStore()
 				fetch(`http://localhost:3001/user/${data.id}`, {
 					method: "PUT",
 					body: JSON.stringify(data),
 					headers: {
 						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
 					},
 				}).then((response) => {
 					console.log("response", response)
@@ -120,7 +132,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
 				fetch("http://localhost:3001/user", {
 					method: "PUT",
-					body: JSON.stringify(data),
+					body: JSON.stringify({
+					"name": data.name,
+					"last_name": data.last_name,	
+					"rut": data.rut,	
+					"email": data.email,		
+					"password": data.password,
+					"user_rol_id": data.user_rol		
+					}),
 					headers: {
 						"content-type": "application/json",
 						Authorization: `Bearer ${storage.token}`
@@ -136,7 +155,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			fetchTaskData: () => {
 				const storage = getStore()
-				fetch(`http://localhost:3001/tasks`,{
+				fetch(`http://localhost:3001/tasks`, {
 					headers: {
 						"content-type": "application/json",
 						Authorization: `Bearer ${storage.token}`
@@ -145,12 +164,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(resp => resp.json())
 					.then(data => {
 						setStore({ taskdata: [...data.data] })
+						console.log(data)
 					})
 					.catch(error => console.log("error to obtain contact data", error))
 			},
 			fetchTaskUser: (id) => {
 				const storage = getStore()
-				fetch(`http://localhost:3001/task/${id}`,{
+				fetch(`http://localhost:3001/task/${id}`, {
 					headers: {
 						"content-type": "application/json",
 						Authorization: `Bearer ${storage.token}`
@@ -158,29 +178,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(resp => resp.json())
 					.then(data => {
-						setStore({ task: data })
+						setStore({ task: [...data] })
+						console.log(data)
 					})
 					.catch(error => console.log("error to obtain task data", error))
 			},
 			fetchTaskDelete: (id) => {
+				const storage = getStore()
 				fetch(`http://localhost:3001/task/${id}`, {
-				  method: "DELETE",
-				  headers: {
-					"content-type": "application/json",
-				  },
-				})
-				  .then((response) => {
-					if (!response.ok) {
-					  throw new Error(`HTTP error! status: ${response.status}`);
+					method: 'DELETE',
+					headers: {
+						Authorization: `Bearer ${storage.token}`
 					}
-					console.log("response", response);
-					return response.json();
-				  })
-				  .catch((error) => {
-					console.log("Error:", error);
-				  });
-			  },
-			
+				})
+					.then(res => {
+						return res.json()
+					})
+					.then(data => console.log(data))
+			},
+			fetchTaskUpdate: (data) => {
+				const storage = getStore()
+				/* 				fetch("https://octopus-app-epbnm.ondigitalocean.app/login", { */
+				fetch("http://localhost:3001/task", {
+					method: "PUT",
+					body: JSON.stringify({
+						"id": data.id,
+						"description": data.description,
+						"user_id": data.user_id,
+						"start_date": data.start_date,
+						"end_date": data.end_date,
+						"status": data.status
+					}),
+					headers: {
+						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
+					},
+				}).then((response) => {
+					return response.json()
+				}).then((data) => {
+					console.log("data", data)
+				})
+				/* 					.catch((error) =>
+										console.log(error)) */
+			},
 		}
 	}
 }
@@ -189,7 +229,4 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 export default getState;
-
-
-
 

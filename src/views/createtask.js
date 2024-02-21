@@ -1,13 +1,11 @@
 import React from 'react';
-import "../css/createtask.css"
 import { useContext } from 'react';
 import { Context } from "../store/appcontext"
-
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 export const CreateTask = () => {
 
     const { actions } = useContext(Context)
-
 
     const handleTask = async (event) => {
         event.preventDefault();
@@ -17,49 +15,55 @@ export const CreateTask = () => {
     }
 
     return (
-        <div className='createtask-body'>
-        <section className="createtask">
-            <div className="login-container">
-                <div className="createtask-content">
-                    <div className="createtask-form">
-                        <h2 className="form-title">Crear Tarea</h2>
-                        <form onSubmit={handleTask} className="register-form" id="login-form">
-                            <div className="form-group">
-                                <label htmlFor="name"><i className="logib-label zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Nombre" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="last_name"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="last_name" id="last_name" placeholder="Apellido" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="start_date"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="start_date" id="start_date" placeholder="Fecha de Inicio" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="end_date"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="end_date" id="end_date" placeholder="Fecha de Termino" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="description"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="description" id="description" placeholder="Descripción" />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="status"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="status" id="status" placeholder="Estatus" />
-                            </div>
-                            <div className="form-group form-button">
-                                <input type="submit" name="createtask" id="createtask" className="form-submit" value="Agregar Tarea" />
-                            </div>
-                        </form>
-                     
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        <Container className='createtask-body'>
+            <Row>
+                <Col xs={12} sm={10} md={10} lg={10} xl={10} className="mx-auto">
+                    <h2 className="text-center mb-4">Crear Tarea</h2>
+                    <Form onSubmit={handleTask}>
 
+                    <Form.Group controlId="user_id">
+                            <Form.Label>Usuario</Form.Label>
+                            <Form.Control as="select" name="user_id">
+                                <option>Seleccione el Usuario</option>
+                                <option value={1}>Tomas Beckmann</option>
+                                <option value={2}>Francisco Parra</option>
+                                <option value={3}>Deyruby Rincon</option>
+                                <option value={4}>Freddy Lobo</option>
+                                <option value={5}>Victor Fernandez</option>
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Form.Group controlId="start_date">
+                            <Form.Label>Fecha de Inicio</Form.Label>
+                            <Form.Control type="date" name="start_date" />
+                        </Form.Group>
+
+                        <Form.Group controlId="end_date">
+                            <Form.Label>Fecha de Termino</Form.Label>
+                            <Form.Control type="date" name="end_date" />
+                        </Form.Group>
+
+                        <Form.Group controlId="description">
+                            <Form.Label>Descripción</Form.Label>
+                            <Form.Control as="textarea" name="description" rows={3} />
+                        </Form.Group>
+
+                        <Form.Group controlId="status">
+                            <Form.Label>Estatus</Form.Label>
+                            <Form.Control as="select" name="status">
+                                <option>Seleccione</option>
+                                <option value={1}>En Progreso</option>
+                                <option value={2}>Completado</option>
+                                <option value={3}>Rechazado</option>
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Button variant="primary" type="submit" className="mt-4">
+                            Agregar Tarea
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container>
     );
 };
-
-   

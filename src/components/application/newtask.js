@@ -2,20 +2,20 @@ import { useContext, useState } from 'react';
 import { Context } from "../../store/appcontext"
 import { useNavigate } from 'react-router-dom';
 
-export const GenerateTask = ({name, lastname, task_description, start_date, end_date, user_id  }) => {
+export const GenerateTask = ({name, lastname, task_description, start_date, end_date, user_id, task_id  }) => {
 
     const { actions } = useContext(Context)
     const navigate = useNavigate();
 
     const handlePutTask = async (event) => {      
             event.preventDefault();
-            actions.fetchUser(user_id);
-            navigate("/updatetask")
+            navigate(`/updatetask/${task_id}`)
     };
 
     function confirmAndDelete() {
         if (window.confirm("Are you sure you want to delete?")) {
-          actions.fetchTaskDelete(user_id)
+          actions.fetchTaskDelete(task_id)
+          navigate("/tasklist")
         }
       }
 
@@ -38,16 +38,10 @@ export const GenerateTask = ({name, lastname, task_description, start_date, end_
                 <span>{end_date}</span>
             </td>
             <td className="td-style text-center">
-               {/*  <a href="#" className="table-link">
+                <a onClick={handlePutTask} className="table-link primary">
                     <span className="fa-stack">
                         <i className="fa fa-square fa-stack-2x"></i>
-                        <i className="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a> */}
-                <a onClick={handlePutTask} className="table-link">
-                    <span className="fa-stack">
-                        <i className="fa fa-square fa-stack-2x"></i>
-                        <i className="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                        <i className="fa fa-pencil primary fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
                 <a onClick={confirmAndDelete} className="table-link danger">

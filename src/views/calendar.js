@@ -1,8 +1,6 @@
 import React from 'react';
 import CalendarComponent from '../components/calendar/calendar';
-import { Sidebar } from '../components/application/sidebar'
 import "../css/calendar.css"
-
 
 export const Calendar = () => {
 
@@ -19,25 +17,20 @@ export const Calendar = () => {
     // Add more files as needed
   ];
 
-
   return (
     <>
       <div className="orden-calendar">
-        <div className='container-calendar col-6'>
-          <section className='gradient'>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12 mb-4">
-                  <div className="container pt-5 card card-custom-calendar">
-                    <div className="card-body">
-                      <h5 className="card-title"> </h5>
-                      <CalendarComponent />
-                    </div>
-                  </div>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-12 mb-4">
+              <div className="container pt-5 card card-custom-calendar">
+                <div className="card-body">
+                  <h5 className="card-title"> </h5>
+                  <CalendarComponent />
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </>

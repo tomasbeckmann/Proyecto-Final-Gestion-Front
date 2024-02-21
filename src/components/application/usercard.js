@@ -9,8 +9,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
 
     const handlePut = async (event) => {      
             event.preventDefault();
-            actions.fetchUser(user_id);
-            navigate("/updateuser")
+            navigate(`/updateuser/${user_email}`)
     };
 
     const handleDelete = async (event) => {
@@ -20,7 +19,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
         };
         await actions.fetchDelete(data);
         await actions.fetchUserData()
-       
+        
     };
 
     let userid = { userrol_id }
@@ -32,7 +31,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
             return "Colaborador"
         }
     }
-    const userRoleString = generateStringFromNumber(userid)
+    const userRoleString = generateStringFromNumber(user_id)
 
     function confirmAndDelete() {
         if (window.confirm("Are you sure you want to delete?")) {

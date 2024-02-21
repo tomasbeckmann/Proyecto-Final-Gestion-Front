@@ -14,10 +14,10 @@ export const TaskListUser = () => {
 	return (
 		<>
 			<div className="orden-tasklistuser">
-				<div className="tasklistuser-body col-10">
+				<div className="tasklistuser-body col-12">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-12">
+							<div className="col-12">
 								<div className="main-box clearfix">
 									<div className="table-responsive">
 										<table className="table user-list">

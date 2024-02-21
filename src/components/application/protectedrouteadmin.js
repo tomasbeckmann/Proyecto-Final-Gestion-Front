@@ -7,7 +7,7 @@ export const ProtectedRouteAdmin = ({userrol}) => {
     if( userrol === 1){
         return <Outlet/>
     } else {
-        return <Navigate to="login"/>
+        return <Navigate to="/login"/>
     }
 
 }

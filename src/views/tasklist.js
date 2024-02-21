@@ -16,7 +16,7 @@ export const TaskList = () => {
 	return (
 		<>
 			<div className="orden-tasklist">
-				<div className="tasklist-body col-10">
+				<div className="tasklist-body col-12">
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-12">
@@ -39,13 +39,14 @@ export const TaskList = () => {
 
 													return (
 														<GenerateTask
-															key={index}
+															key={task.index}
 															name={task.name}
 															lastname={task.last_name}
 															task_description={task.description}
 															start_date={task.start_date}
 															end_date={task.end_date}
-															user_id={task}
+															task_id={task.id}
+															user_id={task.user_id}
 														/>
 													)
 
@@ -54,7 +55,7 @@ export const TaskList = () => {
 											</tbody>
 										</table>
 									</div>
-									<ul className="pagination pull-right">
+								{/* 	<ul className="pagination pull-right">
 										<li><a href="#"><i className="fa fa-chevron-left"></i></a></li>
 										<li><a href="#">1</a></li>
 										<li><a href="#">2</a></li>
@@ -62,7 +63,7 @@ export const TaskList = () => {
 										<li><a href="#">4</a></li>
 										<li><a href="#">5</a></li>
 										<li><a href="#"><i className="fa fa-chevron-right"></i></a></li>
-									</ul>
+									</ul> */}
 								</div>
 							</div>
 						</div>

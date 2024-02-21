@@ -2,7 +2,7 @@ import React from "react";
 import { useContext, useEffect } from 'react';
 import { Context } from './store/appcontext';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
+/* import './App.css'; */
 import { Landing } from "./views/landing";
 import { UserProfile } from "./views/userprofile";
 import { Register } from "./views/register";
@@ -25,6 +25,7 @@ import { HelpUser } from "./views/helpuser";
 import { UpdateTask } from "./views/updatetask";
 import { ProtectedRouteAdmin } from "./components/application/protectedrouteadmin";
 import { ProtectedRoute } from "./components/application/protectedroute";
+import { Navbaruser } from "./components/application/navbar";
 
 function App() {
 
@@ -41,13 +42,13 @@ function App() {
             <Route path="/home" element={<UserProfile />} />
             <Route path="/usercalendar" element={<UserCalendar />} />
             <Route path="/tasklistuser" element={<TaskListUser />} />
-            <Route path="/help" element={<Help />} />
+            <Route path="/help" element={<HelpUser />} />
           </Route>
         </Route>
-
+        <Route path="/nav" element={<Navbaruser/>} />
         <Route element={<ProtectedRouteAdmin userrol={store.user.rol} />}>
           <Route element={<Layout />}>
-            <Route path="/updateuser" element={<UpdateUser />} />
+            <Route path="/updateuser/:user_email" element={<UpdateUser />} />
             <Route path="/tasklist" element={<TaskList />} />
             <Route path="/createtask" element={<CreateTask />} />
             <Route path="/register" element={<Register />} />
@@ -56,8 +57,8 @@ function App() {
             <Route path="/homeadmin" element={<GraphicsChart />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/usermanagement" element={<UserManagement />} />
-            <Route path="/helpadmin" element={<HelpUser />} />
-            <Route path="/updatetask" element={<UpdateTask />} />
+            <Route path="/helpadmin" element={<Help />} />
+            <Route path="/updatetask/:task_id" element={<UpdateTask />} />
           </Route>
         </Route>
       </Routes>

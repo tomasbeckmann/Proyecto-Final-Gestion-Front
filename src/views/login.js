@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Context } from '../store/appcontext';
 import { useNavigate } from 'react-router-dom';
 import '../css/login.css';
+import  LogoLogin  from "../images/7.png"
 
 export const SignIn = () => {
   const { actions } = useContext(Context);
@@ -37,14 +38,14 @@ export const SignIn = () => {
   const isFormValid = () => isEmailValid() && isPasswordValid();
 
   return (
-    <div className="sign-in-body">
+    <div className="sign-in-body testlogin">
       <section className="sign-in">
         <div className="login-container">
           <div className="signin-content">
             <div className="signin-image">
               <figure>
                 <img
-                  src="https://media.istockphoto.com/id/143918313/photo/excavator-at-a-construction-site-against-the-setting-sun.jpg?s=612x612&w=0&k=20&c=1ULa8wwAxgczZDRpmVYuR-cC7wTpIWSZMzVhOCOgjr0="
+                  src={LogoLogin}
                   alt="Construction site"
                 />
               </figure>            
