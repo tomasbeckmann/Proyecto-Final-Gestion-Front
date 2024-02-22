@@ -115,18 +115,18 @@
   "Team": [
     {
       "img": "img/team/03.jpg",
-      "name": "Deyrubi",
-      "job": "Senior Designer"
+      "name": "Deyruby Rincón",
+      "job": "Chief Marketing Officer"
     },
     {
       "img": "img/team/01.jpg",
-      "name": "Tomas",
-      "job": "Director"
+      "name": "Tomás Beckmann",
+      "job": "CEO"
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Francisco",
-      "job": "Senior Designer"
+      "name": "Francisco Parra",
+      "job": "Chief Technology Officer"
     }
     
    ],

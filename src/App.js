@@ -36,6 +36,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
+        
         <Route path="/login" element={<SignIn />} />
         <Route element={<ProtectedRoute userrol={store.user.rol} />}>
           <Route element={<LayoutUser />}>
@@ -54,7 +55,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/filefolder" element={<FileFolder />} />
             <Route path="/fileupload" element={<FileUpload />} />
-            <Route path="/homeadmin" element={<GraphicsChart />} />
+            <Route path="/homeadmin" element={<GraphicsChart />} /> 
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/usermanagement" element={<UserManagement />} />
             <Route path="/helpadmin" element={<Help />} />

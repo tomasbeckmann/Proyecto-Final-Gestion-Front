@@ -11,46 +11,51 @@ import {
 
 const data = [
   {
-    name: "Agosto 2023",
-    Iniciadas: 4000,
-    Problemas: 2400,
-    Terminadas: 2400
+    name: "15/02/2024",
+    Iniciadas: 2,
+    Problemas: 0,
+    Terminadas: 0
   },
   {
-    name: "Septiembre 2023",
-    Iniciadas: 3000,
-    Problemas: 1398,
-    Terminadas: 2210
+    name: "16/02/2024",
+    Iniciadas: 2,
+    Problemas: 0,
+    Terminadas: 0
   },
   {
-    name: "Octubre 2023",
-    Iniciadas: 2000,
-    Problemas: 9800,
-    Terminadas: 2290
+    name:  "17/02/2024",
+    Iniciadas: 2,
+    Problemas: 1,
+    Terminadas: 0
   },
   {
-    name: "Noviembre 2023",
-    Iniciadas: 2780,
-    Problemas: 3908,
-    Terminadas: 2000
+    name:  "18/02/2024",
+    Iniciadas: 3,
+    Problemas: 0,
+    Terminadas: 1
   },
   {
-    name: "Diciembre 2023",
-    Iniciadas: 1890,
-    Problemas: 4800,
-    Terminadas: 2181
+    name:"19/02/2024",
+    Iniciadas: 3,
+    Problemas: 1,
+    Terminadas: 1
   },
   {
-    name: "Enero 2024",
-    Iniciadas: 2390,
-    Problemas: 3800,
-    Terminadas: 2500
+    name: "20/02/2024",
+    Iniciadas: 4,
+    Problemas: 1,
+    Terminadas: 2
+  },{
+    name: "21/02/2024",
+    Iniciadas: 5,
+    Problemas: 1,
+    Terminadas: 2
   },
   {
-    name: "Febrero 2024",
-    Iniciadas: 3490,
-    Problemas: 4300,
-    Terminadas: 2100
+    name:  "22/02/2024",
+    Iniciadas: 5,
+    Problemas: 1,
+    Terminadas: 3
   }
 ];
 

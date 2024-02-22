@@ -5,21 +5,14 @@ class PieChartComponent extends React.Component {
   COLORS = ["#8884d8", "#82ca9d", "#FFBB28", "#FF8042", "#AF19FF"];
   pieData = [
     {
-      name: "Tareas Creadas",
-      value: 54.85
+      name: "Usuarios Vigentes",
+      value: 5
     },
     {
-      name: "Tareas Asignadas",
-      value: 47.91
+      name: "Usuarios inactivos",
+      value: 1
     },
-    {
-      name: "Tareas ejecutadas",
-      value: 16.85
-    },
-    {
-      name: "Tareas Finalizadas",
-      value: 16.14
-    }
+    
   ];
 
   CustomTooltip = ({ active, payload, label }) => {

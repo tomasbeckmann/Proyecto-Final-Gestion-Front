@@ -11,52 +11,59 @@ import {
 
 const data = [
   {
-    name: "Agosto 2023",
-    Al_dia: 4000,
-    Por_Vencer: 3000,
-    Vencidos: 2400,
+    name: "15/02/2024",
+    Al_dia: 2,
+    Vencidos: 0,
+    Por_Vencer: 2,
     
   },
   {
-    name: "Septiembre 2023",
-    Al_dia: 3000,
-    Por_Vencer: 3000,
-    Vencidos: 1398,
+    name: "16/02/2024",
+    Al_dia: 2,
+    Vencidos: 0,
+    Por_Vencer: 2,
     
   },
   {
-    name: "Octubre 2023",
-    Al_dia: 2000,
-    Por_Vencer: 3000,
-    Vencidos: 9800,
+    name: "17/02/2024",
+    Al_dia: 2,
+    Vencidos: 1,
+    Por_Vencer: 1,
     
   },
   {
-    name: "Noviembre 2023",
-    Al_dia: 2780,
-    Por_Vencer: 3000,
-    Vencidos: 3908,
+    name: "18/02/2024",
+    Al_dia: 3,
+    Vencidos: 0,
+    Por_Vencer: 2,
     
   },
   {
-    name: "Diciembre 2023",
-    Al_dia: 1890,
-    Por_Vencer: 3000,
-    Vencidos: 4800,
+    name: "19/02/2024",
+    Al_dia: 3,
+    Vencidos: 0,
+    Por_Vencer: 2,
     
   },
   {
-    name: "Enero 2024",
-    Al_dia: 2390,
-    Por_Vencer: 3000,
-    Vencidos: 3800,
+    name: "20/02/2024",
+    Al_dia: 3,
+    Vencidos: 0,
+    Por_Vencer: 2,
     
   },
   {
-    name: "Febrero 2024",
-    Al_dia: 3490,
-    Por_Vencer: 3000,
-    Vencidos: 4300,
+    name: "21/02/2024",
+    Al_dia: 4,
+    Vencidos: 0,
+    Por_Vencer: 3,
+    
+  },
+  {
+    name: "22/02/2024",
+    Al_dia: 5,
+    Vencidos: 1,
+    Por_Vencer: 3,
     
   }
 ];
@@ -85,8 +92,8 @@ export default function LineChartComponent() {
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       />
-      <Line type="monotone" dataKey="Por_Vencer" stroke="#82ca9d" />
-      <Line type="monotone" dataKey="Vencidos" stroke="#ff7300" />
+      <Line type="monotone" dataKey="Vencidos" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="Por_Vencer" stroke="#ff7300" />
      
     </LineChart>
   );

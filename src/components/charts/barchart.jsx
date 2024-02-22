@@ -11,46 +11,43 @@ import {
 
 const data = [
   {
-    name: "Agosto 2023",
-    Iniciadas: 4000,
-    Problemas: 2400,
-    Terminadas: 2400
+    name: "15/02/2024",
+    Documental: 2,
+    Tareas_operativas: 0
+      },
+  {
+    name: "16/02/2024",
+    Documental: 2,
+    Tareas_operativas: 0
   },
   {
-    name: "Septiembre 2023",
-    Iniciadas: 3000,
-    Problemas: 1398,
-    Terminadas: 2210
+    name: "17/02/2024",
+    Documental: 2,
+    Tareas_operativas: 1
   },
   {
-    name: "Octubre 2023",
-    Iniciadas: 2000,
-    Problemas: 9800,
-    Terminadas: 2290
+    name:"18/02/2024",
+    Documental: 3,
+    Tareas_operativas: 2
   },
   {
-    name: "Noviembre 2023",
-    Iniciadas: 2780,
-    Problemas: 3908,
-    Terminadas: 2000
+    name: "19/02/2024",
+    Documental: 3,
+    Tareas_operativas: 2
   },
   {
-    name: "Diciembre 2023",
-    Iniciadas: 1890,
-    Problemas: 4800,
-    Terminadas: 2181
+    name: "20/02/2024",
+    Documental: 3,
+    Tareas_operativas: 3
+  },{
+    name: "21/02/2024",
+    Documental: 4,
+    Tareas_operativas: 3
   },
   {
-    name: "Enero 2024",
-    Iniciadas: 2390,
-    Problemas: 3800,
-    Terminadas: 2500
-  },
-  {
-    name: "Febrero 2024",
-    Iniciadas: 3490,
-    Problemas: 4300,
-    Terminadas: 2100
+    name: "22/02/2024",
+    Documental: 5,
+    Tareas_operativas: 3
   }
 ];
 
@@ -73,9 +70,9 @@ export default function BarChartComponent() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="Iniciadas" stackId="a" fill="#8884d8" />
-      <Bar dataKey="Problemas" stackId="a" fill="#82ca9d" />
-      <Bar dataKey="Terminadas" stackId="a" fill="#000000" />
+      
+      <Bar dataKey="Documental" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="Tareas_operativas" stackId="a" fill="#000000" />
     </BarChart>
   );
 }

@@ -19,7 +19,7 @@ export const GraphicsChart = () => {
               <div className="col-12 col-md-8 col-lg-6">
                 <div className="card card-custom" >
                   <div className="card-body">
-                    <h5 className="card-title">Gráfico de líneas</h5>
+                    <h5 className="card-title">Estado de documentación</h5>
                     <LineChartComponent />
                   </div>
                 </div>
@@ -27,7 +27,7 @@ export const GraphicsChart = () => {
               <div className="col-12 col-md-8 col-lg-6">
                 <div className="card card-custom" >
                   <div className="card-body">
-                    <h5 className="card-title">Gráfico de áreas</h5>
+                    <h5 className="card-title">Tareas por estado</h5>
                     <AreaChartComponent />
                   </div>
                 </div>
@@ -35,7 +35,7 @@ export const GraphicsChart = () => {
               <div className="col-12 col-md-8 col-lg-6">
                 <div className="card card-custom" >
                   <div className="card-body">
-                    <h5 className="card-title">Gráfico de barras</h5>
+                    <h5 className="card-title">Tareas por tipo</h5>
                     <BarChartComponent />
                   </div>
                 </div>
@@ -43,7 +43,7 @@ export const GraphicsChart = () => {
               <div className="col-12 col-md-8 col-lg-6">
                 <div className="card card-custom" >
                   <div className="card-body">
-                    <h5 className="card-title">Gráfico circular</h5>
+                    <h5 className="card-title">Usuarios por estado</h5>
                     <PieChartComponent />
                   </div>
                 </div>
