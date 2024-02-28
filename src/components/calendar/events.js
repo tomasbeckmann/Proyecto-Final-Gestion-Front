@@ -1,35 +1,41 @@
 const events = [
-    { title: "Renovar cedula de identidad", start: getDate("YEAR-MONTH-02") },
-    { title: "Renovar Licencia de conducir", start: getDate("YEAR-MONTH-03") },
-    { title: "Charla de Higiene y seguridadd", start: getDate("2024-02-03") },
+  {
+    title: "(Francisco Parra) Actualizar Carnet de Identidad",
+    start: getDate("2024-02-21"),
+    end: getDate("2024-02-27"),
+    backgroundColor: "green"
+  },
+  {
+    title: "(Francisco Parra) Actualizar certificado OS-10",
+    start: getDate("2024-02-21"),
+    end: getDate("2024-02-23"),
+    backgroundColor: "green"
+  },
+    {
+      title: "(Deyruby Rincón) Actualizar Foto Carnet de Identidad",
+      start: getDate("2024-02-19"),
+      end: getDate("2024-02-27"),
+      backgroundColor: "pink"
+    },
+    {
+      title: "(Freddy Lobo) Actualizar certificado OS-10",
+      start: getDate("2024-02-20"),
+      end: getDate("2024-02-25"),
+      backgroundColor: "red"
+    },
+    {
+      title: "(Freddy Lobo) Actualizar certificado Antecedentes penales",
+      start: getDate("2024-02-21"),
+      end: getDate("2024-02-28"),
+      backgroundColor: "red"
+    },
+    {
+      title: "(Victor Fernandez) Actualizar Foto de Perfil",
+      start: getDate("2024-02-21"),
+      end: getDate("2024-02-29"),
+      backgroundColor: "blue"
+    },
     
-    {
-      title: "Levantamiento de datos de Sistema de Gestión integrada",
-      start: getDate("YEAR-MONTH-06"),
-      end: getDate("YEAR-MONTH-10"),
-      backgroundColor: "green"
-    },
-    { title: "Auditoría documental", start: getDate("YEAR-MONTH-07") },
-    { title: "Compra de drone ", start: getDate("YEAR-MONTH-08") },
-    {
-      title: "Reunion Mensual",
-      start: getDate("YEAR-MONTH-09"),
-      backgroundColor: "yellow",
-      textColor: "black"
-    },
-    {
-      title: "Informe avances proyecto",
-      start: getDate("YEAR-MONTH-09"),
-      backgroundColor: "purple"
-    },
-  
-    { title: "Cotización limpieza", start: getDate("YEAR-MONTH-28") },
-    {
-      title: "Visita a terreno",
-      start: getDate("YEAR-MONTH-22"),
-      backgroundColor: "red",
-      textColor: "black"
-    }
   ];
   
   function getDate(dayString) {

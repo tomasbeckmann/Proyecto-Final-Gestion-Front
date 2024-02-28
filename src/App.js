@@ -26,45 +26,46 @@ import { UpdateTask } from "./views/updatetask";
 import { ProtectedRouteAdmin } from "./components/application/protectedrouteadmin";
 import { ProtectedRoute } from "./components/application/protectedroute";
 import { Navbaruser } from "./components/application/navbar";
+import { Toaster, toast } from 'sonner'
 
 function App() {
 
   const { store, actions } = useContext(Context);
 
   return (
-
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        
-        <Route path="/login" element={<SignIn />} />
-        <Route element={<ProtectedRoute userrol={store.user.rol} />}>
-          <Route element={<LayoutUser />}>
-            <Route path="/home" element={<UserProfile />} />
-            <Route path="/usercalendar" element={<UserCalendar />} />
-            <Route path="/tasklistuser" element={<TaskListUser />} />
-            <Route path="/help" element={<HelpUser />} />
+    <>
+      <Toaster richColors position="top-right"/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route element={<ProtectedRoute userrol={store.user.rol} />}>
+            <Route element={<LayoutUser />}>
+              <Route path="/home" element={<UserProfile />} />
+              {/*             <Route path="/usercalendar" element={<UserCalendar />} /> */}
+              <Route path="/tasklistuser" element={<TaskListUser />} />
+              <Route path="/help" element={<HelpUser />} />
+            </Route>
           </Route>
-        </Route>
-        <Route path="/nav" element={<Navbaruser/>} />
-        <Route element={<ProtectedRouteAdmin userrol={store.user.rol} />}>
-          <Route element={<Layout />}>
-            <Route path="/updateuser/:user_email" element={<UpdateUser />} />
-            <Route path="/tasklist" element={<TaskList />} />
-            <Route path="/createtask" element={<CreateTask />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/filefolder" element={<FileFolder />} />
-            <Route path="/fileupload" element={<FileUpload />} />
-            <Route path="/homeadmin" element={<GraphicsChart />} /> 
-            <Route path="/calendar" element={<Calendar />} />
-            <Route path="/usermanagement" element={<UserManagement />} />
-            <Route path="/helpadmin" element={<Help />} />
-            <Route path="/updatetask/:task_id" element={<UpdateTask />} />
+          <Route path="/nav" element={<Navbaruser />} />
+          <Route element={<ProtectedRouteAdmin userrol={store.user.rol} />}>
+            <Route element={<Layout />}>
+              <Route path="/updateuser/:user_email" element={<UpdateUser />} />
+              <Route path="/tasklist" element={<TaskList />} />
+              <Route path="/createtask" element={<CreateTask />} />
+              <Route path="/register" element={<Register />} />
+              {/* <Route path="/filefolder" element={<FileFolder />} /> */}
+              <Route path="/fileupload" element={<FileUpload />} />
+              {/*             <Route path="/homeadmin" element={<GraphicsChart />} />  */}
+              {/*             <Route path="/calendar" element={<Calendar />} /> */}
+              <Route path="/homeadmin" element={<UserManagement />} />
+              <Route path="/helpadmin" element={<Help />} />
+              <Route path="/updatetask/:task_id" element={<UpdateTask />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </Router>
-
+        </Routes>
+      </Router>
+    </>
   );
 }
 

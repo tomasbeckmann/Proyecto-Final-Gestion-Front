@@ -82,7 +82,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
   
   .createtask-body {
     margin: 100px;
-    font-size: 3rem !important;
+    font-size: 20px!important;
     line-height: 1.5;
     color: #222;
     background: #f8f8f8;
@@ -186,7 +186,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .createtask-
   #createtask {
     margin-top: 16px; }
   
-
+    .fontsize{
+      font-size: 20px !important;
+    }
   .term-service {
     font-size: 13px;
     color: #222; }

@@ -1,3 +1,5 @@
+import { toast } from 'sonner'
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -9,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			fetchLogin: (data) => {
+
 				const storage = getStore()
 				return fetch("http://localhost:3001/login", {
 					method: "POST",
@@ -16,23 +19,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					headers: {
 						"content-type": "application/json",
 						Authorization: `Bearer ${storage.token}`
-
 					},
 				})
 					.then((response) => {
 						if (response.status === 200) {
 							return response.json()
-						} if (response.status === 401) {
-							const errorMessage = "El usuario no existe"
-							response.json().then((data) => {
-								alert(errorMessage);
-							});
+						} if (response.status === 401) {	
+
+							toast.error("El usuario no existe")
+
 							throw new Error("ERROR")
 						} if (response.status === 400) {
-							const errorMessage2 = "Contraseña incorrecta"
-							response.json().then((data) => {
-								alert(errorMessage2);
-							});
+
+							toast.error("Contraseña incorrecta")
+
 							throw new Error("ERROR")
 						} if (response.status === 422) {
 							throw new Error("ERROR");
@@ -138,7 +138,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"rut": data.rut,	
 					"email": data.email,		
 					"password": data.password,
-					"user_rol_id": data.user_rol		
+					"user_rol_id": data.user_rol,
+					"url_img": data.url_img		
 					}),
 					headers: {
 						"content-type": "application/json",
@@ -166,7 +167,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ taskdata: [...data.data] })
 						console.log(data)
 					})
-					.catch(error => console.log("error to obtain contact data", error))
+					.catch(error => console.log("error to obtain task data", error))
 			},
 			fetchTaskUser: (id) => {
 				const storage = getStore()
@@ -221,6 +222,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/* 					.catch((error) =>
 										console.log(error)) */
 			},
+/* 			fetchPutImg: (data) => {
+				const storage = getStore()
+				fetch("http://localhost:3001/user", {
+					method: "PUT",
+					body: JSON.stringify({
+					"name": data.name,
+					"last_name": data.last_name,	
+					"rut": data.rut,	
+					"email": data.email,		
+					"password": data.password,
+					"user_rol_id": data.user_rol,
+					"imgurl": data.user_img		
+					}),
+					headers: {
+						"content-type": "application/json",
+						Authorization: `Bearer ${storage.token}`
+					},
+				}).then((response) => {
+					console.log("response", response)
+					return response.json()
+				}).then((data2) => {
+					console.log("data", data2)
+				})
+			}, */
 		}
 	}
 }
@@ -229,4 +254,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 export default getState;
+
+
+
 

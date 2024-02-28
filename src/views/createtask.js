@@ -1,7 +1,9 @@
 import React from 'react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Context } from "../store/appcontext"
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import "../css/formulario.css"
+import { Toaster, toast } from 'sonner'
 
 export const CreateTask = () => {
 
@@ -12,12 +14,15 @@ export const CreateTask = () => {
         const inputData = Object.fromEntries(new FormData(event.target));
         console.log(inputData)
         actions.fetchTask(inputData)
+        toast.success("Tarea Creada");
+        event.target.reset() 
+       
     }
 
     return (
-        <Container className='createtask-body'>
+        <Container className='createtask-body fontsize'>
             <Row>
-                <Col xs={12} sm={10} md={10} lg={10} xl={10} className="mx-auto">
+                <Col xs={12} sm={10} md={10} lg={10} xl={10} className="mx-auto ">
                     <h2 className="text-center mb-4">Crear Tarea</h2>
                     <Form onSubmit={handleTask}>
 
@@ -39,7 +44,7 @@ export const CreateTask = () => {
                         </Form.Group>
 
                         <Form.Group controlId="end_date">
-                            <Form.Label>Fecha de Termino</Form.Label>
+                            <Form.Label>Fecha de Término</Form.Label>
                             <Form.Control type="date" name="end_date" />
                         </Form.Group>
 

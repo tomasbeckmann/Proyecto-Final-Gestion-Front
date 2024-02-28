@@ -1,6 +1,6 @@
 import "../css/tasklistuser.css"
 import { Context } from '../store/appcontext';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 export const TaskListUser = () => {
 
@@ -27,19 +27,27 @@ export const TaskListUser = () => {
 													<th className="text-center"><span>Estatus</span></th>
 													<th className="text-center"><span>Fecha Inicio</span></th>
 													<th className="text-center"><span>Fecha Termino</span></th>
-													<th className="text-center"><span>Acciones</span></th>
+													{/* 	<th className="text-center"><span>Acciones</span></th> */}
 												</tr>
 											</thead>
 											<tbody>
 												{store.task && store.task.map((task, index) => {
-													console.log(store.task.deleted)
+													
 													return (
 														<tr>
 															<td className="text-center">
 																{task.description}
 															</td>
 															<td className="text-center">
-																<span class="label status label-danger">Pendiente</span>
+																
+																	{task.status == 1 ? (
+																		<span className="label status label-warning"> Pendiente </span>
+																	) : task.status == 2 ? (
+																		<span className="label status label-success"> Completado</span>
+																	) : task.status == 3 ? (
+																		<span className="label status label-danger"> Rechazado</span>
+																	) : null}																	
+
 															</td>
 															<td className="text-center">
 																<span>{task.start_date}</span>
@@ -47,7 +55,7 @@ export const TaskListUser = () => {
 															<td className="text-center">
 																<span>{task.end_date}</span>
 															</td>
-															<td className="td-style text-center">
+															{/* <td className="td-style text-center">
 																<a href="#" className="table-link">
 																	<span className="fa-stack">
 																		<i className="fa fa-square fa-stack-2x"></i>
@@ -66,7 +74,7 @@ export const TaskListUser = () => {
 																		<i className="fa fa-trash-o fa-stack-1x fa-inverse"></i>
 																	</span>
 																</a>
-															</td>
+															</td> */}
 														</tr>
 													)
 												})

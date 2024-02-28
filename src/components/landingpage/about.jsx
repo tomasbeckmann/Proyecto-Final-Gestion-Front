@@ -5,12 +5,12 @@ export const About = (props) => {
     <div id="about">
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-6 about-text d-flex justify-content-center">
             {" "}
-            <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
+            <img src="img/about.jpg" className="img-fluid" alt="" />{" "}
           </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-text">
+          <div className="col-xs-12 fs-3 col-md-6">
+            <div className="about-text text-center">
               <h2>Acerca de nosotros</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
               <h3>Porque elegirnos?</h3>
@@ -25,13 +25,7 @@ export const About = (props) => {
                   </ul>
                 </div>
                 <div className="">
-                  {/* <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => (
-                          <li key={`${d}-${i}`}> {d}</li>
-                        ))
-                      : "loading"}
-                  </ul> */}
+                 
                 </div>
               </div>
             </div>

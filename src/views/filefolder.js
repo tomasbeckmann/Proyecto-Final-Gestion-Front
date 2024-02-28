@@ -1,4 +1,4 @@
-import "../css/filefolder.css"
+/* import "../css/filefolder.css"
 
 export const FileFolder = () => {
     return (
@@ -12,7 +12,7 @@ export const FileFolder = () => {
                         <div className="file-manager-actions container-p-x py-2">
                             <div>
                                 <a href="https://ubiquitous-fortnight-g4q9pjwrvqvgcv45q-3000.app.github.dev/fileupload">
-                                <button type="button" className="btn btn-primary mr-2"><i className="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
+                                    <button type="button" className="btn btn-primary mr-2"><i className="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
                                 </a>
                                 <button type="button" className="button-spacing btn btn-secondary icon-btn mr-2" disabled=""><i className="ion ion-md-cloud-download"></i></button>
                                 <div className="btn-group button-spacing mr-2">
@@ -76,6 +76,31 @@ export const FileFolder = () => {
                                     <a className="dropdown-item" href="">Remove</a>
                                 </div>
                             </div>
+                            
+                        </div>
+                        <div className="file-item">
+                            <div className="file-item-select-bg bg-primary"></div>
+                            <label className="file-item-checkbox custom-control custom-checkbox">
+                                <input type="checkbox" className="custom-control-input" />
+                                <span className="custom-control-label"></span>
+                            </label>
+                            <div className="file-item-icon far fa-file-archive text-secondary"></div>
+                            <a href="" className="file-item-name">
+                                Archive.zip
+                            </a>
+                            <div className="file-item-changed">02/16/2018</div>
+                            <div className="file-item-actions btn-group">
+                                <button type="button" className="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown">
+                                    <i className="ion ion-ios-more"></i>
+                                </button>
+                                <div className="dropdown-menu dropdown-menu-right">
+                                    <a className="dropdown-item" href="">Rename</a>
+                                    <a className="dropdown-item" href="">Move</a>
+                                    <a className="dropdown-item" href="">Copy</a>
+                                    <a className="dropdown-item" href="">Remove</a>
+                                </div>
+                            </div>
+                            
                         </div>
 
                     </div>
@@ -84,3 +109,4 @@ export const FileFolder = () => {
         </>
     );
 }
+ */

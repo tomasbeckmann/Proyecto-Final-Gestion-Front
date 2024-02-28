@@ -31,11 +31,11 @@ export const Navbaradmin = () => {
                         <a className="nav-link-admin" href="#">Inicio</a>
                     </Link>
                     </li>
-                    <li className="nav-item">
+{/*                     <li className="nav-item">
                     <Link to="/usermanagement" relative="path" className="navlink-sidebar text-white list-margin"> 
                         <a className="nav-link-admin" href="#">Administrar Usuarios</a>
                     </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                     <Link to="/register" relative="path" className="navlink-sidebar text-white list-margin">
                         <a className="nav-link-admin" href="#">Crear Usuario</a>
@@ -51,16 +51,16 @@ export const Navbaradmin = () => {
                         <a className="nav-link-admin" href="#">Agregar Tareas</a>
                     </Link>
                     </li>
-                    <li className="nav-item">
+{/*                     <li className="nav-item">
                     <Link to="/calendar" relative="path" className="navlink-sidebar text-white help-margin">
                         <a className="nav-link-admin" href="#">Calendario</a>
                     </Link>
-                    </li>
-                    <li className="nav-item">
+                    </li> */}
+{/*                     <li className="nav-item">
                     <Link to="/filefolder" relative="path" className="navlink-sidebar text-white help-margin">
                         <a className="nav-link-admin" href="#">Carpeta de Archivos</a>
                     </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                     <Link to="/helpadmin" relative="path" className="navlink-sidebar text-white help-margin">
                         <a className="nav-link-admin" href="#">Ayuda</a>
@@ -70,9 +70,7 @@ export const Navbaradmin = () => {
                     <li className="nav-item">
                         <a className="nav-link-admin" href="#">{`${store.user.name} ${store.user.last_name}`}</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link-admin" href="#">Configuración</a>
-                    </li>
+
                     <li className="nav-item">
                         <a className="nav-link-admin" href="/login">Cerrar sesión</a>
                     </li>

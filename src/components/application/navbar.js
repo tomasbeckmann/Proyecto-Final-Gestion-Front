@@ -35,11 +35,11 @@ export const Navbaruser = () => {
                         <a className="nav-link-user" href="#">Tareas</a>
                     </Link>
                     </li>
-                    <li className="nav-item">
+{/*                     <li className="nav-item">
                     <Link to="/usercalendar" relative="path" className="navlink-sidebar text-white list-margin">
                         <a className="nav-link-user" href="#">Calendario</a>
                     </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                     <Link to="/help" relative="path" className="navlink-sidebar text-white help-margin">
                         <a className="nav-link-user" href="#">Ayuda</a>
@@ -48,9 +48,6 @@ export const Navbaruser = () => {
                     <hr className='hr'/>
                     <li className="nav-item">
                         <a className="nav-link-user" href="#">{`${store.user.name} ${store.user.last_name}`}</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link-user" href="#">Configuración</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link-user" href="/login">Cerrar sesión</a>

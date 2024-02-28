@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Context } from '../store/appcontext';
 import { useNavigate } from 'react-router-dom';
 import '../css/login.css';
-import  LogoLogin  from "../images/7.png"
+import  LogoLogin  from "../images/datagather.png"
 
 export const SignIn = () => {
   const { actions } = useContext(Context);
@@ -38,66 +38,57 @@ export const SignIn = () => {
   const isFormValid = () => isEmailValid() && isPasswordValid();
 
   return (
-    <div className="sign-in-body testlogin">
-      <section className="sign-in">
-        <div className="login-container">
-          <div className="signin-content">
-            <div className="signin-image">
-              <figure>
-                <img
-                  src={LogoLogin}
-                  alt="Construction site"
-                />
-              </figure>            
-            </div>
-            <div className="signin-form">
-              <h2 className="form-title">Inicio de sesión</h2>
-              <form onSubmit={handleLogin} className="register-form" id="login-form">
-                <div className="form-group">
-                  <label htmlFor="your_email">
-                    <i className="logib-label zmdi zmdi-account material-icons-name"></i>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="your_email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="E-mail"
-                    className={isEmailValid() ? '' : 'invalid-input'}
-                  />
-                  {!isEmailValid() && <span className="warning-message">Email no valido</span>}
-                </div>
-                <div className="form-group">
-                  <label htmlFor="your_pass">
-                    <i className="logib-label zmdi zmdi-lock"></i>
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="your_pass"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                    className={isPasswordValid() ? '' : 'invalid-input'}
-                  />
-                  {!isPasswordValid() && <span className="warning-message">Contraseña debe tener mínimo 8 caracteres</span>}
-                </div>
-               {/*  <div className="form-group">
-                  <input type="checkbox" name="remember-me" id="remember-me" className="agree-term" />
-                  <label htmlFor="remember-me" className="logib-label label-agree-term">
-                    <span><span></span></span>Recordarme
-                  </label>
-                </div> */}
-                <div className="form-group form-button">
-                  <input type="submit" name="signin" id="signin" className="form-submit" value="Log in" />
-                </div>
-              </form>
-            </div>
-          </div>
+    <div class="sign-in-body testlogin d-flex justify-content-center">
+  <section class="sign-in">
+    <div class="container login-container">
+      <div class="row align-items-center">
+        <div class="col-md-12 signin-image">
+          <figure>
+            <img src={LogoLogin} className='mt-5' alt="Construction site" />
+          </figure>
         </div>
-      </section>
+        <div class="col-md-10 signin-form">
+          <h2 class="form-title mt-5">Inicio de sesión</h2>
+          <form onSubmit={handleLogin} class="register-form" id="login-form">
+            <div class="form-group">
+              <label htmlFor="your_email">
+                <i class="logib-label zmdi zmdi-account material-icons-name"></i>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="your_email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="E-mail"
+                class={isEmailValid() ? '' : 'invalid-input'}
+              />
+              {!isEmailValid() && <span class="m-3 warning-message">Email no valido</span>}
+            </div>
+            <div class="form-group">
+              <label htmlFor="your_pass">
+                <i class="logib-label zmdi zmdi-lock"></i>
+              </label>
+              <input
+                type="password"
+                name="password"
+                id="your_pass"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+                class={isPasswordValid() ? '' : 'invalid-input'}
+              />
+              {!isPasswordValid() && <span class="m-3 warning-message">Contraseña debe tener mínimo 8 caracteres</span>}
+            </div>
+            <div class="form-group form-button d-flex mb-5 justify-content-center">
+              <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </section>
+</div>
   );
 };
 

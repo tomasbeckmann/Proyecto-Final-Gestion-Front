@@ -1,24 +1,55 @@
 import React from 'react';
 /* import "../css/createtask.css" */
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Context } from "../store/appcontext"
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { toast } from 'sonner'
 
 export const UpdateUser = () => {
 
     const { actions } = useContext(Context)
     const navigate = useNavigate();
     const { user_email } = useParams();
+    const [urlImagen, setUrlImagen] = useState('');
 
     const handleSubmit = async (event) => {
 
         event.preventDefault();
         const inputData = Object.fromEntries(new FormData(event.target));
         inputData.email = user_email
+        inputData.url_img = urlImagen
+        console.log(inputData)
         actions.fetchPut(inputData)
-        navigate("/usermanagement")
+        toast.success("Usuario Actualizado")
+        navigate("/homeadmin")
     }
+
+    const changeUploadImage = async (event) => {
+        const file = event.target.files[0];
+        const data = new FormData();
+        
+        data.append("file", file);
+        data.append("upload_preset", "Presents_react");
+    
+        console.log(data)
+    
+        try {
+          const response = await fetch(
+            "https://api.cloudinary.com/v1_1/dwmstwn0o/image/upload",
+            {
+              method: "POST",
+              body: data,
+            }
+          );
+          console.log(response)
+          const responseData = await response.json();
+          setUrlImagen(responseData.secure_url);
+          return responseData
+        } catch (error) {
+          console.error("Error uploading image:", error);
+        }
+      };
     
     return (
         <div className='createtask-body'>
@@ -45,9 +76,18 @@ export const UpdateUser = () => {
                                 <input type="text" name="password" id="password" placeholder="Contraseña" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="user_rol"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="user_rol" id="user_rol" placeholder="Rol" />
+                            <select className="logib-label zmdi zmdi-lock" name="user_rol" id="user_rol" placeholder="Rol de Usuario">
+                                    <option>Seleccione un estatus</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Colaborador</option>
+                             </select>
                             </div>
+                            <div className="form-group">
+                                <label htmlFor="url_img"><i className="logib-label zmdi zmdi-lock"></i></label>
+                                Selecione una Foto de Perfil:
+                                <input type="file" name='irl_img' accept="image/*" onChange={changeUploadImage} />
+                            </div>
+
                             <div className="form-group form-button">
                                 <input type="submit" name="createtask" id="createtask" className="form-submit" value="Submit" />
                             </div>

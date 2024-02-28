@@ -5,6 +5,7 @@ import { Context } from "../store/appcontext"
 import "../css/login.css";
 import { validateEmail } from '../components/application/registerutil';
 import LogoRegister from "../images/6.png"
+import { toast } from 'sonner'
 
 const PasswordErrorMessage = () => (
   <p className="FieldError">Password debe tener al menos 8 caracteres</p>
@@ -51,11 +52,12 @@ export const Register = () => {
     if (isFormValid) {
       const inputData = Object.fromEntries(new FormData(event.target));
       console.log(Object.fromEntries(new FormData(event.target)));
+      inputData.url_img = "https://res.cloudinary.com/dwmstwn0o/image/upload/v1708782042/carpeta_imagenes_react/p6l10p7e3ubiqe4ps4w5.jpg"
       actions.fetchRegister(inputData);
-      alert("Account created!");
+      toast.success("Usuario Creado");
       clearForm();
     } else {
-      alert("Form is not valid. Please check your inputs.");
+      toast.error("Formulario no valido. Revisa los campos");
     }
   };
 
@@ -156,12 +158,12 @@ export const Register = () => {
                     )}
                   </div>
 
-                  <div className="form-group">
+                  <div className="form-group d-flex justify-content-center " >
                     <label htmlFor="rol"><i className="zmdi zmdi-lock-outline"></i>
                       Ingresa el rol del colaborador:  <sup></sup>
                     </label >
                     <select
-                      className='col-6 fs-3 form-control'
+                      className='col-6 fs-3 form-control '
                       value={role} onChange={(e) => setRole(e.target.value)}
                       onBlur={() => validateRoleField()}
                       placeholder="Repite el password del usuario"
@@ -188,7 +190,7 @@ export const Register = () => {
                   </div>
                 </form>
               </div>
-              <div className="signup-image mt-0">
+              <div className="signup-image mb-3">
                 <h2 className="form-title">Registro de Usuarios</h2>
                 <figure><img src={LogoRegister} alt="" /></figure>
               </div>

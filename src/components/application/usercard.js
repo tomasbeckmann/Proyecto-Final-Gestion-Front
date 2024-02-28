@@ -1,15 +1,16 @@
 import { useContext, useState } from 'react';
 import { Context } from "../../store/appcontext"
 import { useNavigate } from 'react-router-dom';
+import { Toaster, toast } from 'sonner'
 
-export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id }) => {
+export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id, user_img }) => {
 
     const { actions } = useContext(Context)
     const navigate = useNavigate();
 
-    const handlePut = async (event) => {      
-            event.preventDefault();
-            navigate(`/updateuser/${user_email}`)
+    const handlePut = async (event) => {
+        event.preventDefault();
+        navigate(`/updateuser/${user_email}`)
     };
 
     const handleDelete = async (event) => {
@@ -19,7 +20,7 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
         };
         await actions.fetchDelete(data);
         await actions.fetchUserData()
-        
+
     };
 
     let userid = { userrol_id }
@@ -34,16 +35,19 @@ export const UserCard = ({ name, lastname, rut, userrol_id, user_email, user_id 
     const userRoleString = generateStringFromNumber(user_id)
 
     function confirmAndDelete() {
-        if (window.confirm("Are you sure you want to delete?")) {
-          handleDelete();
-        }
-      }
+        toast.error('Estas seguro quieres Eliminar el Usuario?', {
+            action: {
+                label: 'Eliminar',
+                onClick: () => handleDelete()
+            },
+        })
+    }
 
     return (
         <tr className="candidates-list">
             <td className="title">
                 <div className="thumb">
-                    <img className="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" />
+                   <img className="img-fluid" src={`${user_img}`} alt="" />
                 </div>
                 <div className="candidate-list-details">
                     <div className="candidate-list-info">

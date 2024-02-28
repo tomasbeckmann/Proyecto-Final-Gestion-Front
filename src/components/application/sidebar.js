@@ -32,14 +32,14 @@ export const Sidebar = () => {
               Inicio
             </Link>
           </li>
-          <li>
+         {/*  <li>
           <Link to="/usermanagement" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-users icon" style={{ fontSize: '1.25em' }} />
               Administrar Usuarios
             </Link>
-          </li>
+          </li> */}
           <li>
           <Link to="/register" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
@@ -65,22 +65,22 @@ export const Sidebar = () => {
             </Link>
           </li>
       
-          <li>
+{/*           <li>
           <Link to="/calendar" relative="path" className="navlink-sidebar text-white list-margin"> 
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-calendar-days icon" style={{ fontSize: '1.25em' }} />
               Calendario
             </Link>
-          </li>
-          <li>
+          </li> */}
+{/*           <li>
           <Link to="/filefolder" relative="path" className="navlink-sidebar text-white list-margin">
               <svg className="bi me-2" width="16" height="16">
               </svg>
               <i className="fa-solid fa-folder-open icon" style={{ fontSize: '1.25em' }} />
               Carpeta de Archivos
             </Link>
-          </li>              
+          </li>   */}            
           <li>
           <Link to="/helpadmin" relative="path" className="navlink-sidebar text-white  help-margin">
               <svg className="bi me-2" width="16" height="16">
@@ -93,12 +93,11 @@ export const Sidebar = () => {
         <hr className='hr'/>
         <div className="dropdown">
           <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2" />
+            <img src={`${store.user.url_img}`} alt="" width="32" height="32" className="rounded-circle me-2" />
             <strong>{`${store.user.name} ${store.user.last_name}`}</strong>
           </a>
           <ul className="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="dropdownUser1">
             <li><a className="dropdown-item" href="#">Perfil</a></li>
-            <li><a className="dropdown-item" href="#">Configuración</a></li>
             <li><hr className="dropdown-divider" /></li>
             <li><a className="dropdown-item" href="/login">Cerrar sesión</a></li>
           </ul>

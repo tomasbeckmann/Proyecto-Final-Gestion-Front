@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { Context } from "../store/appcontext"
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Toaster, toast } from 'sonner'
 
 
 export const UpdateTask = () => {
@@ -19,6 +20,7 @@ export const UpdateTask = () => {
         const inputData = Object.fromEntries(new FormData(event.target));
         inputData.id = task_id
         actions.fetchTaskUpdate(inputData)
+        toast.success("Tarea Actualizada")
         navigate("/tasklist")
     }
 
@@ -28,7 +30,7 @@ export const UpdateTask = () => {
             <div className="login-container">
                 <div className="createtask-content">
                     <div className="createtask-form">
-                        <h2 className="form-title">Crear Tarea</h2>
+                        <h2 className="form-title">Modificar Tarea</h2>
                         <form onSubmit={handleTask} className="register-form" id="login-form">                                        
                             <div className="form-group">
                                 <label htmlFor="start_date"><i className="logib-label zmdi zmdi-lock"></i></label>
@@ -44,7 +46,12 @@ export const UpdateTask = () => {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="status"><i className="logib-label zmdi zmdi-lock"></i></label>
-                                <input type="text" name="status" id="status" placeholder="Estatus" />
+                                <select name="status" id="status" placeholder="Estatus">
+                                    <option>Seleccione un estatus</option>
+                                    <option value="1">En Progreso</option>
+                                    <option value="2">Completo</option>
+                                    <option value="3">Rechazado</option>
+                                </select>
                             </div>
                             <div className="form-group form-button">
                                 <input type="submit" name="createtask" id="createtask" className="form-submit" value="Guardar Tarea" />

@@ -1,13 +1,15 @@
 import { useNavigate, Navigate, Outlet } from "react-router-dom"
+import { useEffect } from "react";
 
-export const ProtectedRoute = ({userrol}) => {
+export const ProtectedRoute = ({ userrol }) => {
 
-    const Navigate = useNavigate();
+    const navigate = useNavigate();
 
-    if( userrol === 2){
-        return <Outlet/>
-    } else {
-        return <Navigate to="/login"/>
-    }
+    useEffect(() => {
+        if (userrol !== 2) {
+            navigate("/login")
+        }
+    }, [])
 
+    return <Outlet />
 }

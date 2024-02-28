@@ -24,8 +24,8 @@ export const UserManagement = () => {
                           <table className="table manage-candidates-top mb-0">
                             <thead>
                               <tr>
-                                <th>Lista de Usuarios</th>
-                                <th className="action text-right">Action</th>
+                                <th className="fs-4">Lista de Usuarios</th>
+                                <th className="action fs-4 text-right">Action</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -41,6 +41,7 @@ export const UserManagement = () => {
                                       userrol_id={user.user_rol_id}
                                       user_email={user.email}
                                       user_id={user.id}
+                                      user_img={user.url_img}
                                     />
                                   )
                                 } 

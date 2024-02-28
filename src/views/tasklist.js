@@ -33,7 +33,8 @@ export const TaskList = () => {
 													<th className="text-center"><span>Acciones</span></th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody className="fs-5">
+												
 												{store.taskdata && store.taskdata.map((task, index) => {
 													console.log(store.taskdata.deleted)
 
@@ -47,15 +48,15 @@ export const TaskList = () => {
 															end_date={task.end_date}
 															task_id={task.id}
 															user_id={task.user_id}
+															task_status={task.status}
 														/>
 													)
-
 												})
 												}
 											</tbody>
 										</table>
 									</div>
-								{/* 	<ul className="pagination pull-right">
+									{/* 	<ul className="pagination pull-right">
 										<li><a href="#"><i className="fa fa-chevron-left"></i></a></li>
 										<li><a href="#">1</a></li>
 										<li><a href="#">2</a></li>

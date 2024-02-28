@@ -151,8 +151,8 @@ hr {
 }
 .logolanding{
   vertical-align: center;
-  height: 65px;
-  width: 95px;
+  height: 60px;
+  width: 140px;
   margin-top: 0 !important;
 }
 
@@ -517,7 +517,7 @@ header .intro-text {
   background: #fff;
 }
 label {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   float: left;
@@ -526,7 +526,7 @@ label {
   display: block;
   width: 100%;
   padding: 6px 12px;
-  font-size: 16px;
+  /* font-size: 18px; */
   line-height: 1.42857143;
   color: #444;
   background-color: #fff;

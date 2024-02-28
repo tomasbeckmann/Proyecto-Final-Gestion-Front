@@ -40,9 +40,9 @@
 }
 
 .documents-tab {
-    height: 62vh;
+    height: 53vh;
     text-align: center;
-    overflow-y: scroll;
+    
 }
 .card-contract{
 align-items: center;

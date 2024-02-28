@@ -1,5 +1,5 @@
 import React from 'react';
-import CalendarComponent from '../components/calendar/calendar';
+import CalendarComponent from '../components/calendar/calendar2';
 import "../css/calendaruser.css"
 
 export const UserCalendar = () => {
@@ -23,7 +23,7 @@ export const UserCalendar = () => {
       <div className="orden-calendar">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12 mb-4">
+            <div className="col-12 mb-4">
               <div className="container pt-5 card card-custom-calendar">
                 <div className="card-body">
                   <h5 className="card-title"> </h5>
