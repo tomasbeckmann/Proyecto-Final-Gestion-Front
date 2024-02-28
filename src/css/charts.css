@@ -1,0 +1,14 @@
+.chart-container{
+   display: inline-block;
+}
+
+.orden-charts{
+   display: flex;
+   width: 100%;
+   
+}
+
+.title-charts{
+   font-size: 3em;
+   margin-top: 10px !important;
+}

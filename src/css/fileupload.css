@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.drag-image {
+  border: 2px dashed #fff;
+  height: 500px;
+  width: 550px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  
+}
+
+.drag-image.active {
+  border: 2px solid #fff;
+}
+
+.icon {
+  font-size: 50px;
+  color: #fff;
+}
+
+.drag-image h6 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.drag-image span {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.drag-image button {
+  padding: 10px 25px;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.drag-image button:hover {
+  background-color: #fff;
+  color: #206EEB;
+}
+
+.drag-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+.filebody {
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: linear-gradient(
+    to right,
+    #96BEE6,
+    #C5CFE9 
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+

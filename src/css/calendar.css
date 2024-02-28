@@ -1,0 +1,18 @@
+.orden-calendar{
+    display: flex;
+    justify-items: center;
+    height: 90vh;
+    width: 150vh;
+    overflow-y: scroll;
+}
+
+.card-custom-calendar {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  

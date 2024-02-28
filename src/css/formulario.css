@@ -1,0 +1,7 @@
+input, select, textarea, button{
+    font-size: 1.6rem !important;
+}
+
+label {
+    font-size: 2rem !important;
+}
