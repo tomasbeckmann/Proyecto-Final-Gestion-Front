@@ -36,7 +36,7 @@ export const Navigation = (props) => {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">CONTACTANOS</Nav.Link>
+            <Nav.Link href="#deets">CONTÁCTANOS</Nav.Link>
             <Nav.Link eventKey={2} href="/login">
               LOGIN
             </Nav.Link>

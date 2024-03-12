@@ -13,7 +13,7 @@ export const About = (props) => {
             <div className="about-text text-center">
               <h2>Acerca de nosotros</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
-              <h3>Porque elegirnos?</h3>
+              <h3>¿Por qué elegirnos?</h3>
               <div className="list-style">
                 <div className="col-lg-12 col-sm-12 col-xs-12">
                   <ul>

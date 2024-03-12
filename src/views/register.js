@@ -105,7 +105,7 @@ export const Register = () => {
                       type="text"
                       name="rut"
                       id="rut"
-                      placeholder="Ingresa tu rut del usuario"
+                      placeholder="Ingresa el rut del usuario"
                     />
                   </div>
 
@@ -116,7 +116,7 @@ export const Register = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       onBlur={() => validateEmailField()}
-                      placeholder="Ingresa correo electronico del usuario"
+                      placeholder="Ingresa correo electrónico del usuario"
                       type="email"
                       name="email"
                       id="email"

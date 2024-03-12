@@ -29,7 +29,7 @@ export const TaskList = () => {
 													<th className="text-center"><span>Tarea</span></th>
 													<th className="text-center"><span>Estatus</span></th>
 													<th className="text-center"><span>Fecha Inicio</span></th>
-													<th className="text-center"><span>Fecha Termino</span></th>
+													<th className="text-center"><span>Fecha Término</span></th>
 													<th className="text-center"><span>Acciones</span></th>
 												</tr>
 											</thead>

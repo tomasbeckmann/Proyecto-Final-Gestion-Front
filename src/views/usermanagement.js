@@ -25,7 +25,7 @@ export const UserManagement = () => {
                             <thead>
                               <tr>
                                 <th className="fs-4">Lista de Usuarios</th>
-                                <th className="action fs-4 text-right">Action</th>
+                                <th className="action fs-4 text-right">Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
