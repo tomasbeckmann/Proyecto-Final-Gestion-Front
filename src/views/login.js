@@ -63,7 +63,7 @@ export const SignIn = () => {
                 placeholder="E-mail"
                 class={isEmailValid() ? '' : 'invalid-input'}
               />
-              {!isEmailValid() && <span class="m-3 warning-message">Email no valido</span>}
+              {!isEmailValid() && <span class="m-3 warning-message">Email no válido</span>}
             </div>
             <div class="form-group">
               <label htmlFor="your_pass">

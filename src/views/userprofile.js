@@ -138,7 +138,7 @@ export const UserProfile = () => {
                         </td>
                       </tr>
                       <tr className="tr-userprofile">
-                        <td>Examen de Salud</td>
+                        <td>Exámen de Salud</td>
                         <td>Rechazado</td>
                         <td>
                           <button className="userprofile-button">Editar</button>
